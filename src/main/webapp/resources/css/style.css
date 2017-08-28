@@ -83,7 +83,25 @@ body {
 #box2 {
 	width: 265px;
 	float: left;
+	p: align-right;
 }
+
+#buttonmushroom {
+	width: 265px;
+	float: left;
+	p: align-right;
+	
+	
+}
+
+#button_mushroom_text{
+	
+	float: right;
+	width: 301px;
+	
+	
+}
+
 
 
 .footer-container p{
