@@ -16,39 +16,39 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-
-@Configuration
-@ComponentScan(basePackages="mushroom.spring")
 @EnableWebMvc
-public class MvcConfiguration extends WebMvcConfigurerAdapter{
+@Configuration
+@ComponentScan({ "mushroom.spring.*" })
+@Import({ SecurityConfig.class })
+public class MvcConfiguration extends WebMvcConfigurerAdapter {
 
 	@Bean
-	public ViewResolver getViewResolver(){
+	public ViewResolver getViewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
 		return resolver;
 	}
-	
+
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
-	
-    @Bean
-    public DataSource getDataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://mushcompany.cprgcmiyeqkl.eu-west-1.rds.amazonaws.com:3306/mushroomcompany1");
-        dataSource.setUsername("mushroom");
-        dataSource.setPassword("mushroom1");
-         
-        return dataSource;
-    }
-     
-    @Bean
-    public CustomerDAO getCustomerDAO() {
-        return new CustomerDAOImpl(getDataSource());
-    }
-	
+
+	@Bean
+	public DataSource getDataSource() {
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://mushcompany.cprgcmiyeqkl.eu-west-1.rds.amazonaws.com:3306/mushroomcompany1");
+		dataSource.setUsername("mushroom");
+		dataSource.setPassword("mushroom1");
+
+		return dataSource;
+	}
+
+	@Bean
+	public CustomerDAO getCustomerDAO() {
+		return new CustomerDAOImpl(getDataSource());
+	}
+
 }

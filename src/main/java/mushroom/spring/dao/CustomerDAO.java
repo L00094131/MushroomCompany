@@ -8,9 +8,9 @@ public interface CustomerDAO {
     
     public void saveOrUpdate(Customer customer);
      
-    public void delete(int customerId);
+    public void delete(int customer_Id);
      
-    public Customer get(int customerId);
+    public Customer get(int customer_Id);
      
     public List<Customer> list();
 }
