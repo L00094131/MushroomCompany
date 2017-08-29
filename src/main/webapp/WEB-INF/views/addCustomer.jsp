@@ -46,10 +46,14 @@
 					</tr>
 					<tr>
 						<td>Type:</td>
-						<td><form:input path="customer_type" /></td>
+						<td><form:select path="customer_type">
+								<form:option value="Not Selected"> --SELECT--</form:option>
+								<form:option value="Primary Customer" label="Primary Customer" />
+								<form:option value="Normal Customer" label="Normal Customer" />
+							</form:select></td>
 					</tr>
 					<tr>
-					<td colspan="2" align="center"><input type="submit"
+						<td colspan="2" align="center"><input type="submit"
 							value="Save"></td>
 					</tr>
 				</table>
