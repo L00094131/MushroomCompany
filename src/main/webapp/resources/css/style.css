@@ -86,21 +86,6 @@ body {
 	p: align-right;
 }
 
-#buttonmushroom {
-	width: 265px;
-	float: left;
-	p: align-right;
-	
-	
-}
-
-#button_mushroom_text{
-	
-	float: right;
-	width: 301px;
-	
-	
-}
 
 .error {
 	padding: 15px;
@@ -112,6 +97,9 @@ body {
 	border-color: #ebccd1;
 }
 
+<<<<<<< HEAD
+.footer-container p {
+=======
 .msg {
 	padding: 15px;
 	margin-bottom: 20px;
@@ -133,6 +121,7 @@ body {
 }
 
 .footer-container p{
+>>>>>>> branch 'master' of https://github.com/L00094131/MushroomCompany.git
 	text-align: center;
 	font-size: 14px;
 	font-weight: bold;
@@ -143,3 +132,15 @@ body {
 	border-top: 1px #666 solid;
 	padding: 10px 0;
 }
+
+
+table, td, th {
+	padding: 15px;
+    width: 700px;
+}
+
+#button {
+	float:right
+
+}
+	

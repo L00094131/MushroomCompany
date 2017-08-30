@@ -9,6 +9,19 @@
 
 	<div id="content-wrapper">
 		<div id="content">
+<<<<<<< HEAD
+				<h1>Customer List</h1>
+				<h3>AKIAI624FRSFUWRGIINAAKIAI624FRSFUWRGIINA
+					<a href="newCustomer">Add A New Customer</a>
+				</h3>
+				<table border="1">
+					<th>No</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Address</th>
+					<th>Telephone</th>
+					<th>Action</th>
+=======
 			<h1>Customer List</h1>
 			<h3>
 				<a href="newCustomer">Add Customer</a>
@@ -24,6 +37,7 @@
 				<th>Postcode</th>
 				<th>Type</th>
 				<th>Action</th>
+>>>>>>> branch 'master' of https://github.com/L00094131/MushroomCompany.git
 
 				<c:forEach var="customer" items="${listCustomer}" varStatus="status">
 					<tr>
