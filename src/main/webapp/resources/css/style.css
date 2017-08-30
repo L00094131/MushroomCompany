@@ -86,25 +86,9 @@ body {
 	p: align-right;
 }
 
-#buttonmushroom {
-	width: 265px;
-	float: left;
-	p: align-right;
-	
-	
-}
-
-#button_mushroom_text{
-	
-	float: right;
-	width: 301px;
-	
-	
-}
 
 
-
-.footer-container p{
+.footer-container p {
 	text-align: center;
 	font-size: 14px;
 	font-weight: bold;
@@ -115,3 +99,15 @@ body {
 	border-top: 1px #666 solid;
 	padding: 10px 0;
 }
+
+
+table, td, th {
+	padding: 15px;
+    width: 700px;
+}
+
+#button {
+	float:right
+
+}
+	

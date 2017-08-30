@@ -9,26 +9,23 @@
 
 	<div id="content-wrapper">
 		<div id="content">
-				<h1>Customer List</h1>
-				<h3>AKIAI624FRSFUWRGIINAAKIAI624FRSFUWRGIINA
-					<a href="newCustomer">Add A New Customer</a>
+				<h1>Order Form</h1>
+				
+					
 				</h3>
 				<table border="1">
-					<th>No</th>
-					<th>Name</th>
-					<th>Email</th>
-					<th>Address</th>
-					<th>Telephone</th>
-					<th>Action</th>
-
-					<c:forEach var="customer" items="${listCustomer}"
+					<th>Product type</th>
+					<th>Quantity</th>
+					<th>Preferences</th>
+					
+					<c:forEach var="order" items="${listOrder}"
 						varStatus="status">
-						<tr>
-							<td>${status.index + 1}</td>
-							<td>${customer.name}</td>
-							<td>${customer.email}</td>
-							<td>${customer.address}</td>
-							<td>${customer.telephone}</td>
+						<tr>	
+						<td>${status.index + 1}</td>
+							<td>${customer.productType}</td>
+							<td>${customer.quantity}</td>
+							<td>${customer.preference}</td>
+							
 							<td><a href="editCustomer?id=${customer.id}">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
 								href="deleteCustomer?id=${customer.id}">Delete</a></td>
@@ -39,4 +36,5 @@
 			</div>
 			<jsp:include page="_footer.jsp" />
 	</div>
-</div>
+</div>				
+					
