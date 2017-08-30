@@ -48,7 +48,7 @@
 					<tr>
 						<td>Type:</td>
 						<td><form:select path="customer_type">
-								<form:option value="Not Selected"> --SELECT--</form:option>
+								<form:option value="Not Selected">--SELECT--</form:option>
 								<form:option value="Primary Customer" label="Primary Customer" />
 								<form:option value="Normal Customer" label="Normal Customer" />
 							</form:select></td>
