@@ -12,7 +12,7 @@
 			<li><a href="products">Products</a></li>
 			<li><a href='contact'>Contact</a></li>
 			<li><a href="about">About</a></li>
-			<li><a href="customerForm">Test</a></li>
+			<li><a href="customerForm">Manage Customers</a></li>
 			<li style="float: right"><a href='login'>Sign-In</a></li>
 		</ul>
 	</div>
