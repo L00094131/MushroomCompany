@@ -3,6 +3,7 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!--hello-->
+<!-- hello 2 -->
 <div id="wrapper">
 	<jsp:include page="_header.jsp" />
 	<jsp:include page="_menu.jsp" />
