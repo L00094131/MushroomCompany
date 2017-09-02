@@ -9,15 +9,15 @@
 	<div id="content-wrapper">
 		<div id="login-box">
 
-			<h3>Login with username and password</h3>
+			<h3>Login with email address and password</h3>
 
 			<form name='loginForm' action="<c:url value='/login' />"
 				method='POST'>
 
 				<table>
 					<tr>
-						<td>User:</td>
-						<td><input type='text' name='username' value=''></td>
+						<td>Email:</td>
+						<td><input type='text' name='email' value=''></td>
 					</tr>
 					<tr>
 						<td>Password:</td>

@@ -1,9 +1,6 @@
 package mushroom.spring.controller;
 
-import java.io.IOException;
-import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,10 +13,10 @@ import mushroom.spring.model.Customer;
 
 @Controller
 public class MainController {
-
-
 	
-	
+	@Autowired
+	private CustomerDAO customerDAO;
+
 	@RequestMapping(value="/")
 	public String home(){
 		return "index";
@@ -54,11 +51,20 @@ public class MainController {
 		return "admin";
 	}
 	
-	@RequestMapping(value="/signup", method = RequestMethod.GET)
-	public String signup(){
-		return "signup";
+	
+	@RequestMapping(value = "/signup", method = RequestMethod.GET)
+	public ModelAndView signup(ModelAndView model) {
+		Customer newCustomer = new Customer();
+		model.addObject("customer", newCustomer);
+		model.setViewName("signup");
+		return model;
 	}
 	
+	@RequestMapping(value = "/signupConfirmation", method = RequestMethod.POST)
+	public String signupConfirmation(@ModelAttribute Customer customer) {
+		customerDAO.saveOrUpdate(customer);
+		return "signupConfirmation";
+	}
 	
 
 }

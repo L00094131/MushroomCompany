@@ -90,16 +90,11 @@ body {
 	width: 265px;
 	float: left;
 	p: align-right;
-	
-	
 }
 
-#button_mushroom_text{
-	
+#button_mushroom_text {
 	float: right;
 	width: 301px;
-	
-	
 }
 
 .error {
@@ -122,6 +117,14 @@ body {
 	border-color: #bce8f1;
 }
 
+#confirmation {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
 #login-box {
 	width: 300px;
 	padding: 20px;
@@ -132,13 +135,18 @@ body {
 	border: 1px solid #000;
 }
 
-.footer-container p{
+#firstname_error, #lastname_error, #email_error, #password_error,
+	#address_error, #postcode_error, #phone_error {
+	color: red;
+}
+
+.footer-container p {
 	text-align: center;
 	font-size: 14px;
 	font-weight: bold;
 }
 
-.footer-container{
+.footer-container {
 	clear: both;
 	border-top: 1px #666 solid;
 	padding: 10px 0;

@@ -9,7 +9,7 @@
 
 	<div id="content-wrapper">
 		<div id="content">
-			<h1>ADMIN</h1>
+			<h1>ADMIN HOME PAGE</h1>
 		</div>
 		<jsp:include page="_footer.jsp" />
 	</div>
