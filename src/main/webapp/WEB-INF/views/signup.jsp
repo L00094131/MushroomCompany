@@ -3,75 +3,97 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<title>Sign Up</title>
 <script type="text/javascript">
-<!--
-	function validate() {
-		var name_regex = /^[a-zA-Z]+$/;
 
+<!--
+	function validateFirstName() {
 		//first name 
 		if (document.signupform.customer_first_name.value == "") {
-			document.getElementById('firstname_error').innerHTML = "*Please enter first name*";
+			document.getElementById('firstname_error').innerHTML = "*First name cannot be empty.*";
 			return false;
 		} else {
 			document.getElementById('firstname_error').innerHTML = "";
+			return true;
 		}
+	}
 
+	function validateLastName() {
 		//second name
 		if (document.signupform.customer_last_name.value == "") {
-			document.getElementById('lastname_error').innerHTML = "*Please enter last name*";
+			document.getElementById('lastname_error').innerHTML = "*Last name cannot be empty.*";
 			return false;
 		} else {
 			document.getElementById('lastname_error').innerHTML = "";
+			return true;
 		}
-
-		//email
-		if (document.signupform.customer_email.value == "") {
-			document.getElementById('email_error').innerHTML = "*Please enter email*";
-			return false;
-		} else {
-			document.getElementById('email_error').innerHTML = "";
-		}
-
+	}
+	
+	function validatePassword() {
 		//password
 		if (document.signupform.customer_password.value == "") {
-			document.getElementById('password_error').innerHTML = "*Please enter password*";
+			document.getElementById('password_error').innerHTML = "*Password cannot be empty.*";
 			return false;
 		} else {
 			document.getElementById('password_error').innerHTML = "";
+			return true;
 		}
-
+	}
+	
+	function validateAddress() {
 		//address
 		if (document.signupform.customer_address.value == "") {
-			document.getElementById('address_error').innerHTML = "*Please enter address*";
+			document.getElementById('address_error').innerHTML = "*Address cannot be empty.*";
 			return false;
 		} else {
 			document.getElementById('address_error').innerHTML = "";
+			return true;
 		}
-
-		//address
-		if (document.signupform.customer_address.value == "") {
-			document.getElementById('address_error').innerHTML = "*Please enter address*";
-			return false;
-		} else {
-			document.getElementById('address_error').innerHTML = "";
-		}
-
+	}
+	
+	function validatePostcode() {
 		//postcode
 		if (document.signupform.customer_postcode.value == "") {
-			document.getElementById('postcode_error').innerHTML = "*Please enter postcode*";
+			document.getElementById('postcode_error').innerHTML = "*Postcode cannot be empty.*";
 			return false;
 		} else {
 			document.getElementById('postcode_error').innerHTML = "";
+			return true;
 		}
-		
+	}
+	function validatePhoneNumber() {
 		//phone number
 		if (document.signupform.customer_phone_number.value == "") {
-			document.getElementById('phone_error').innerHTML = "*Please enter telephone number*";
+			document.getElementById('phone_error').innerHTML = "*Telephone cannot be empty.*";
 			return false;
 		} else {
 			document.getElementById('phone_error').innerHTML = "";
+			return true;
 		}
 
+	}
+
+	function validateEmail(mail) {
+		var regex = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@{[a-zA-Z0-9_\-\.]+0\.([a-zA-Z]{2,5}){1,25})+)*$/;
+		if (regex.test(mail.customer_email.value)) {
+			document.getElementById('email_error').innerHTML = "";
+			return true;
+		} else {
+			document.getElementById('email_error').innerHTML = "*Please enter a valid email address.*";
+			return false;
+		}
+	}
+
+	function validateForm() {
+		var isFormValid = true;
+		isFormValid &= validateFirstName();
+		isFormValid &= validateLastName();
+		isFormValid &= validateEmail(this);
+		isFormValid &= validateAddress();
+		isFormValid &= validatePostcode();
+		isFormValid &= validatePassword();
+		isFormValid &= validatePhoneNumber();
+		return isFormValid ? true : false;
 	}
 //-->
 </script>
@@ -85,7 +107,8 @@
 		<p>In order to sign up, we just need a few details from you</p>
 
 		<form:form name="signupform" action="signupConfirmation"
-			onsubmit="return validate();" method="post" modelAttribute="customer">
+			onsubmit="return validateForm();" method="post"
+			modelAttribute="customer">
 			<table>
 				<form:hidden path="customer_id" />
 				<tr>
@@ -111,15 +134,18 @@
 				</tr>
 				<tr>
 					<td>Address:</td>
-					<td><form:input path="customer_address" /><div id="address_error"></div></td>
+					<td><form:input path="customer_address" />
+						<div id="address_error"></div></td>
 				</tr>
 				<tr>
 					<td>Postcode:</td>
-					<td><form:input path="customer_postcode" /><div id="postcode_error"></div></td>
+					<td><form:input path="customer_postcode" />
+						<div id="postcode_error"></div></td>
 				</tr>
 				<tr>
 					<td>Telephone:</td>
-					<td><form:input path="customer_phone_number" /><div id="phone_error"></div></td>
+					<td><form:input path="customer_phone_number" />
+						<div id="phone_error"></div></td>
 				</tr>
 				<tr>
 					<form:hidden path="customer_type" />
