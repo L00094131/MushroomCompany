@@ -19,7 +19,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @Configuration
 @ComponentScan({ "mushroom.spring.*" })
-@Import({ SecurityConfig.class })
 public class MvcConfiguration extends WebMvcConfigurerAdapter {
 
 	@Bean
