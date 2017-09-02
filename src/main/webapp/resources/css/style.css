@@ -97,6 +97,18 @@ body {
 	width: 301px;
 }
 
+#signup-content {
+	float: left;
+	width: 580px;
+	padding-bottom: 50px;
+}
+
+#signup-right-side {
+	float: right;
+	width: 400px;
+	padding-top: 10px;
+}
+
 .error {
 	padding: 15px;
 	margin-bottom: 20px;
@@ -134,6 +146,17 @@ body {
 	-moz-border-radius: 2px;
 	border: 1px solid #000;
 }
+
+#signup-box{
+	width: 400px;
+	padding: 10px;
+	margin: 40px auto;
+	background: #fff;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border: 1px solid #000;	
+}
+
 
 #firstname_error, #lastname_error, #email_error, #password_error,
 	#address_error, #postcode_error, #phone_error {
