@@ -5,7 +5,7 @@
 
 <div id="wrapper">
 	<jsp:include page="_header.jsp" />
-	<jsp:include page="_menu.jsp" />
+	<jsp:include page="_adminMenu.jsp" />
 
 	<div id="content-wrapper">
 		<div id="content">

@@ -30,7 +30,10 @@ public class MainController {
 		return "index";
 	}
 	
-	
+	@RequestMapping(value="/login", method = RequestMethod.GET)
+	public String login(){
+		return "login";
+	}
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
 	public String about() {
 	    return "about";
@@ -44,6 +47,11 @@ public class MainController {
 	@RequestMapping(value="/contact", method = RequestMethod.GET)
 	public String contact(){
 		return "contact";
+	}
+	
+	@RequestMapping(value="/admin", method = RequestMethod.GET)
+	public String admin(){
+		return "admin";
 	}
 	
 	@RequestMapping(value="/signup", method = RequestMethod.GET)
