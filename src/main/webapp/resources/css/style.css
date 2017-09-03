@@ -41,6 +41,30 @@ body {
 	padding-bottom: 50px;
 }
 
+.table1 {
+	border: 1px solid black;
+}
+
+.table1 th {
+	border: 1px solid black;
+	height: 50px;
+}
+
+.table1 td {
+	border: 1px solid black;
+	height: 50px;
+}
+
+.table1 {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table1 td, th {
+	padding: 10px;
+	text-align: left;
+}
+
 #content p {
 	font-size: 12px;
 	line-height: 180%;
@@ -103,6 +127,7 @@ body {
 	padding-bottom: 50px;
 }
 
+
 #signup-right-side {
 	float: right;
 	width: 400px;
@@ -147,16 +172,15 @@ body {
 	border: 1px solid #000;
 }
 
-#signup-box{
+#signup-box {
 	width: 400px;
 	padding: 10px;
 	margin: 40px auto;
 	background: #fff;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
-	border: 1px solid #000;	
+	border: 1px solid #000;
 }
-
 
 #firstname_error, #lastname_error, #email_error, #password_error,
 	#address_error, #postcode_error, #phone_error {

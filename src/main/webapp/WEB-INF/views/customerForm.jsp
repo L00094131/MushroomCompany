@@ -1,3 +1,4 @@
+<title>Manage Customers</title>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,10 +9,10 @@
 	<jsp:include page="_adminMenu.jsp" />
 
 	<div id="content-wrapper">
-		<div id="content">
-			<h1>Customer List</h1>
-			<h3><a href="newCustomer">Add Customer</a></h3>
-			<table border="1">
+		<h1>Manage Customers</h1>
+		<p>Below is a list of all customers signed up for the website. Here you and edit/delete customers.</p>
+		<p>To add a customer to the database click <a href="newCustomer">here</a>.</p>
+			<table class="table1">
 				<th>ID</th>
 				<th>First Name</th>
 				<th>Last Name</th>
@@ -41,7 +42,7 @@
 					</tr>
 				</c:forEach>
 			</table>
+			<br><br>
 		</div>
-		<jsp:include page="_footer.jsp" />
-	</div>
+	<jsp:include page="_footer.jsp" />
 </div>

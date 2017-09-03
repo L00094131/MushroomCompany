@@ -1,3 +1,4 @@
+<title>Manage Orders</title>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,7 +8,7 @@
 <!-- hello 3 -->
 <div id="wrapper">
 	<jsp:include page="_header.jsp" />
-	<jsp:include page="_menu.jsp" />
+	<jsp:include page="_adminMenu.jsp" />
 	
 
 	<div id="content-wrapper">

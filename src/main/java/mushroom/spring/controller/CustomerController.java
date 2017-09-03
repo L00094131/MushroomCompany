@@ -33,7 +33,6 @@ public class CustomerController {
 		List<Customer> listCustomer = customerDAO.list();
 		model.addObject("listCustomer", listCustomer);
 		model.setViewName("customerForm");
-
 		return model;
 	}
 
@@ -56,7 +55,6 @@ public class CustomerController {
 		Customer customer = customerDAO.get(customerId);
 		ModelAndView model = new ModelAndView("addCustomer");
 		model.addObject("customer", customer);
-
 		return model;
 	}
 }

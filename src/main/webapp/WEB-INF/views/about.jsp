@@ -1,3 +1,4 @@
+<title>About</title>
 <div id="wrapper">
 	<jsp:include page="_header.jsp" />
 	<jsp:include page="_menu.jsp" />

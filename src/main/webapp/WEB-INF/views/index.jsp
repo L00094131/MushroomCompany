@@ -8,7 +8,7 @@
 
 <head>
 
-<title>Mushroom Company</title>
+<title>Home</title>
 <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/menustyles.css" />"
 	rel="stylesheet">
