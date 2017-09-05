@@ -3,7 +3,7 @@ package mushroom.spring.model;
 /**
  * This class implements the Vendor class
  * 
- * @author michael mcfadden...
+ * @author michael
  * @version 1.0
  * @since 2017
  *
