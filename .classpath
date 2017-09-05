@@ -21,9 +21,6 @@
 	<classpathentry exported="true" kind="var" path="M2_REPO/org/springframework/spring-webmvc/4.0.3.RELEASE/spring-webmvc-4.0.3.RELEASE.jar"/>
 	<classpathentry exported="true" kind="var" path="M2_REPO/org/springframework/spring-web/4.0.3.RELEASE/spring-web-4.0.3.RELEASE.jar"/>
 	<classpathentry exported="true" kind="var" path="M2_REPO/org/springframework/spring-orm/4.0.3.RELEASE/spring-orm-4.0.3.RELEASE.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/org/springframework/security/spring-security-web/3.2.0.RELEASE/spring-security-web-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/org/springframework/security/spring-security-core/3.2.0.RELEASE/spring-security-core-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/org/springframework/security/spring-security-config/3.2.0.RELEASE/spring-security-config-3.2.0.RELEASE.jar"/>
 	<classpathentry exported="true" kind="var" path="M2_REPO/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar"/>
 	<classpathentry exported="true" kind="var" path="M2_REPO/jstl/jstl/1.2/jstl-1.2.jar"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
