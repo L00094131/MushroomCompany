@@ -34,7 +34,7 @@ public class EmployeeTests {
 		assertTrue(employee.getEmployee_first_name() == "test");
 	}
 	@Test
-	public void testgetCustomer_first_name() {
+	public void testgetEmployee_first_name() {
 		Employee employee = new Employee();
 		employee.setEmployee_first_name("test");
 		assertTrue(employee.getEmployee_first_name() == "test");
