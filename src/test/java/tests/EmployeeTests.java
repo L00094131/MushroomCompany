@@ -3,8 +3,6 @@ package tests;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-
-import mushroom.spring.model.Customer;
 import mushroom.spring.model.Employee;
 
 public class EmployeeTests {
