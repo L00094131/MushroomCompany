@@ -15,7 +15,7 @@ public class Employee {
 	private String employee_address;
 	private String employee_postcode;
 	private String employee_email;
-	private String employee_phone_number;
+	private int employee_phone_number;
 	private String employee_password;
 
 	public Employee() {
@@ -41,7 +41,7 @@ public class Employee {
 	 *            the employee's password
 	 */
 	public Employee(String employee_first_name, String employee_last_name, String employee_address,
-			String employee_postcode, String employee_email, String employee_phone_number, String employee_password) {
+			String employee_postcode, String employee_email, int employee_phone_number, String employee_password) {
 		this.employee_first_name = employee_first_name;
 		this.employee_last_name = employee_last_name;
 		this.employee_address = employee_address;
@@ -170,7 +170,7 @@ public class Employee {
 	 * 
 	 * @return this employee's phone number
 	 */
-	public String getEmployee_phone_number() {
+	public int getEmployee_phone_number() {
 		return employee_phone_number;
 	}
 
@@ -180,7 +180,7 @@ public class Employee {
 	 * @param employee_phone_number
 	 *            the employee's phone number
 	 */
-	public void setEmployee_phone_number(String employee_phone_number) {
+	public void setEmployee_phone_number(int employee_phone_number) {
 		this.employee_phone_number = employee_phone_number;
 	}
 
