@@ -1,12 +1,14 @@
 package tests;
 
+//Author: Eugene Robb
+//Date: 05/09/17
+//Desc: This class contains basic JUnit tests for the Contact class.
+
 import mushroom.spring.model.Contact;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-//Author: Eugene Robb
-//Date: 05/09/17
-//Desc: This class contains basic JUnit tests for the Contact class.
+
 
 public class ContactTests {
 	Contact contact = new Contact(123456789, "This is a sample message for the contact field", "testemail@lyit.ie",
