@@ -1,4 +1,4 @@
-package customer_tests;
+package tests;
 
 import mushroom.spring.model.Customer;
 import static org.junit.Assert.*;
