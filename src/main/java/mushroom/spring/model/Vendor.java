@@ -59,7 +59,6 @@ public class Vendor {
 	
 	public Vendor(String vendor_name, String vendor_email, String vendor_address, String vendor_phone_number,
 			String mushroom_type, int quantity) {
-		super();
 		this.vendor_name = vendor_name;
 		this.vendor_email = vendor_email;
 		this.vendor_address = vendor_address;
