@@ -12,7 +12,7 @@ public class Order {
     private String Sell_By_Date;
     private String Delivery;
     
-    //Constructor
+    //Constructor 667
     
     public Order(int inventory_ID ,int Customer_ID, String  Mushroom_Type ,String Jar_Size, String Quantity, String Sell_By_Date, String Delivery) {
     	 
