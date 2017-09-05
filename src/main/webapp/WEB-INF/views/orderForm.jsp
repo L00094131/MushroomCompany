@@ -23,6 +23,10 @@
 							<td><input id="order_type" name="order_type" style="height:25px; width:230px; font-size:13pt;" type="text" value=""/></td>
 						</tr>
 						<tr>
+							<td>Inventory ID:</td>
+							<td><input id="order_type" name="order_type" style="height:25px; width:230px; font-size:13pt;" type="text" value=""/></td>
+						</tr>
+						<tr>
 							<td>Type:</td>
 							<td><input id="order_type" name="order_type" style="height:25px; width:230px; font-size:13pt;" type="text" value=""/></td>
 						</tr>
