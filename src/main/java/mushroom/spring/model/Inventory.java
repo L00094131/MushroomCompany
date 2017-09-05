@@ -6,7 +6,7 @@ package mushroom.spring.model;
  * @author Nico
  * @version 1.0
  * @since 2017
- *
+ * ghgf
  */
 public class Inventory {
 	private int Inventory_ID;
