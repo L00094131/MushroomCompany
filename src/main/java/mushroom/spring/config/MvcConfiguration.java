@@ -2,6 +2,8 @@ package mushroom.spring.config;
 
 import javax.sql.DataSource;
 
+import mushroom.spring.dao.AdminSummaryDAO;
+import mushroom.spring.dao.AdminSummaryDAOImpl;
 import mushroom.spring.dao.ContactDAO;
 import mushroom.spring.dao.ContactDAOImpl;
 import mushroom.spring.dao.CustomerDAO;
@@ -10,12 +12,14 @@ import mushroom.spring.dao.CustomerDAOImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
 
 /**
  * @author Eugene
@@ -61,6 +65,12 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	@Bean
 	public ContactDAO getContactDAO() {
 		return new ContactDAOImpl(getDataSource());
+	}
+	
+	
+	@Bean
+	public AdminSummaryDAO getAdminSummaryDAO() {
+		return new AdminSummaryDAOImpl(getDataSource());
 	}
 
 }

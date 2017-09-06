@@ -11,6 +11,9 @@
 	<div id="content-wrapper">
 		<div id="content">
 			<h1>Welcome Admin</h1>
+			<h2>Summary</h2>
+
+			
 		</div>
 		<jsp:include page="_footer.jsp" />
 	</div>
