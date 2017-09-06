@@ -2,7 +2,7 @@ package tests;
 
 /*
  *  Author Michael McFadden
- *  Description Writr junit tests
+ *  Description Write junit tests
  *  5-9-2017
  * 
  * 

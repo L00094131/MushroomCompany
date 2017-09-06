@@ -10,7 +10,7 @@ package mushroom.spring.model;
  */
 public class Contact {
 	private int contact_id;
-	private int contact_telephone;
+	private String contact_telephone;
 	private String contact_message;
 	private String contact_email;
 	private String contact_name;
@@ -31,7 +31,7 @@ public class Contact {
 	 * @param contact_name
 	 *            the contact name
 	 */
-	public Contact(int contact_telephone, String contact_message, String contact_email, String contact_name) {
+	public Contact(String contact_telephone, String contact_message, String contact_email, String contact_name) {
 		this.contact_telephone = contact_telephone;
 		this.contact_message = contact_message;
 		this.contact_email = contact_email;
@@ -62,7 +62,7 @@ public class Contact {
 	 * 
 	 * @return this contacts telephone
 	 */
-	public int getContact_telephone() {
+	public String getContact_telephone() {
 		return contact_telephone;
 	}
 
@@ -72,7 +72,7 @@ public class Contact {
 	 * @param contact_telephone
 	 *            the contact telephone
 	 */
-	public void setContact_telephone(int contact_telephone) {
+	public void setContact_telephone(String contact_telephone) {
 		this.contact_telephone = contact_telephone;
 	}
 

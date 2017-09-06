@@ -10,7 +10,9 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="mushroom.spring" />
+    <context:component-scan base-package="mushroom.spring.controller" />
+    <context:component-scan base-package="mushroom.spring.config" />
+    <context:component-scan base-package="mushroom.spring.dao" />
 
     <bean
 	class="org.springframework.web.servlet.view.InternalResourceViewResolver">

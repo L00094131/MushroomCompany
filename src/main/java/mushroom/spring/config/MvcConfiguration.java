@@ -2,6 +2,8 @@ package mushroom.spring.config;
 
 import javax.sql.DataSource;
 
+import mushroom.spring.dao.ContactDAO;
+import mushroom.spring.dao.ContactDAOImpl;
 import mushroom.spring.dao.CustomerDAO;
 import mushroom.spring.dao.CustomerDAOImpl;
 
@@ -54,6 +56,11 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	@Bean
 	public CustomerDAO getCustomerDAO() {
 		return new CustomerDAOImpl(getDataSource());
+	}
+	
+	@Bean
+	public ContactDAO getContactDAO() {
+		return new ContactDAOImpl(getDataSource());
 	}
 
 }
