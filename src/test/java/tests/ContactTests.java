@@ -13,12 +13,12 @@ import org.junit.Test;
 
 
 public class ContactTests {
-	Contact contact = new Contact(123456789, "This is a sample message for the contact field", "testemail@lyit.ie",
+	Contact contact = new Contact("123456789", "This is a sample message for the contact field", "testemail@lyit.ie",
 			"Eugene Robb");
 
 	@Test
 	public void testPhone() {
-		assertEquals(123456789, contact.getContact_telephone());
+		assertEquals("123456789", contact.getContact_telephone());
 	}
 
 	@Test

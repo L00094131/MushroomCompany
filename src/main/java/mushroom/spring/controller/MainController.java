@@ -37,10 +37,7 @@ public class MainController {
 		return "products";
 	}
 	
-	@RequestMapping(value="/contact", method = RequestMethod.GET)
-	public String contact(){
-		return "contact";
-	}
+
 	
 	@RequestMapping(value="/admin", method = RequestMethod.GET)
 	public String admin(){
