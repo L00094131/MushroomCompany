@@ -15,7 +15,7 @@
 
 				<h1>New/Edit Inventory</h1>
 				<form:form action="saveInventory" method="post"
-					modelAttribute="Inventory">  //changed to I from i
+					modelAttribute="inventory">
 					<table>
 						<form:hidden path="Inventory_ID" />
 						<tr>
@@ -38,9 +38,14 @@
 						</tr>
 						<tr>
 							<td>Jar Size:</td>
-							<td><form:input
+							<td><form:select
 									style="height:25px; width:230px; font-size:13pt;"
-									path="Jar_size" /></td>
+									path="Jar_size">
+									<form:option value="Not Selected">--SELECT--</form:option>
+									<form:option value="Small" label="Small" />
+									<form:option value="Medium" label="Medium" />
+									<form:option value="Large" label="Large" />
+								</form:select></td>
 						</tr>
 						<tr>
 							<td>Sell By Date:</td>

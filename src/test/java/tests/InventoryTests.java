@@ -1,4 +1,4 @@
-package tests;
+/*package tests;
 
 import mushroom.spring.model.Inventory;
 import static org.junit.Assert.*;
@@ -32,3 +32,4 @@ public class InventoryTests {
 		assertTrue(inventory.getMushroom_Type() == "RoundMushroom");
 	}
 }
+*/
