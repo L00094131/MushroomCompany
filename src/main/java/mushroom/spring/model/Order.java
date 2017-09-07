@@ -13,10 +13,10 @@ public class Order {
 	private int Inventory_ID;
 	private int Customer_ID;
 	private String Mushroom_Type;
-	private String Jar_Size;
+	private String Jar_size;
 	private String Quantity;
 	private String Sell_By_Date;
-	private String Delivery;
+	private String Deliver_Date;
 
 	
 	public Order() {
@@ -41,17 +41,17 @@ public class Order {
 	 * @param Delivery
 	 * delivery date of product to the customer
 	 */
-	public Order(int Order_ID, int Inventory_ID, int Customer_ID, String Mushroom_Type, String Jar_Size, String Quantity,
-			String Sell_By_Date, String Delivery) {
+	public Order(int Order_ID, int Inventory_ID, int Customer_ID, String Mushroom_Type, String Jar_size, String Quantity,
+			String Sell_By_Date, String Deliver_Date) {
 		
         this.Order_ID= Order_ID;
 		this.Inventory_ID = Inventory_ID;
 		this.Customer_ID = Customer_ID;
 		this.Mushroom_Type = Mushroom_Type;
-		this.Jar_Size = Jar_Size;
+		this.Jar_size = Jar_size;
 		this.Quantity = Quantity;
 		this.Sell_By_Date = Sell_By_Date;
-		this.Delivery = Delivery;
+		this.Deliver_Date = Deliver_Date;
 	}
 	// getter and setters
     /**
@@ -68,8 +68,8 @@ public class Order {
      * @param Order_ID
      *  the order id
      */
-    public void setOrder_ID(int Order_ID) {
-    	this.Order_ID= Order_ID;
+    public void setOrder_ID(int order_Id) {
+    	this.Order_ID= order_Id;
     }
 	/**
 	 * this returns the inventory id of an order
@@ -124,16 +124,16 @@ public class Order {
 	 * this gets the jar size for an order
 	 * @return
 	 */
-	public String getJar_Size() {
-		return Jar_Size;
+	public String getJar_size() {
+		return Jar_size;
 	}
 
 	/**
 	 * this sets the jar size of an order
 	 * @param jar_Size
 	 */
-	public void setJar_Size(String jar_Size) {
-		Jar_Size = jar_Size;
+	public void setJar_size(String jar_size) {
+		Jar_size = jar_size;
 	}
 
 	/**
@@ -172,16 +172,16 @@ public class Order {
 	 * this gets the delivery date for an order
 	 * @return
 	 */
-	public String getDelivery() {
-		return Delivery;
+	public String getDeliver_Date() {
+		return Deliver_Date;
 	}
 
 	/**
 	 * this sets the delivery date for an order
 	 * @param delivery
 	 */
-	public void setDelivery(String delivery) {
-		Delivery = delivery;
+	public void setDeliver_Date(String deliver_Date) {
+		Deliver_Date = deliver_Date;
 	}
 
 }

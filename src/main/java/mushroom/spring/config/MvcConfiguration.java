@@ -8,6 +8,8 @@ import mushroom.spring.dao.ContactDAO;
 import mushroom.spring.dao.ContactDAOImpl;
 import mushroom.spring.dao.CustomerDAO;
 import mushroom.spring.dao.CustomerDAOImpl;
+import mushroom.spring.dao.OrderDAO;
+import mushroom.spring.dao.OrderDAOImpl;
 import mushroom.spring.dao.InventoryDAO;
 import mushroom.spring.dao.InventoryDAOImpl;
 
@@ -51,7 +53,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	public DataSource getDataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://mushcompany.cprgcmiyeqkl.eu-west-1.rds.amazonaws.com:3306/mushroomcompany1");
+		dataSource.setUrl(databaseConfig.Credentials.url);
 		dataSource.setUsername(databaseConfig.Credentials.username);
 		dataSource.setPassword(databaseConfig.Credentials.password);
 		
@@ -63,6 +65,11 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		return new CustomerDAOImpl(getDataSource());
 	}
 	
+	@Bean 
+	public OrderDAO getOrderDAO() {
+		return new OrderDAOImpl(getDataSource());
+	}
+		
 	@Bean
 	public ContactDAO getContactDAO() {
 		return new ContactDAOImpl(getDataSource());

@@ -89,6 +89,19 @@ public class MainController {
 		return "admin";
 	}
 	
+	@RequestMapping(value="/customer", method = RequestMethod.GET)
+	public String customer(){
+		// logs debug message
+		if (logger.isDebugEnabled()) {
+			logger.debug("admin method executed.");
+		}
+		else {
+		//logs exception
+		logger.error("admin method failed to execute.", new Exception("Method fail"));
+		}
+		return "customer";
+	}	
+	
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public ModelAndView signup(ModelAndView model) {

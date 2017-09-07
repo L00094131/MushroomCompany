@@ -22,18 +22,18 @@
 				<th>Mushroom Type</th>
 				<th>Action</th>
 
-				<c:forEach var="Inventory" items="${listInventory}" varStatus="status">
+				<c:forEach var="inventory" items="${listInventory}" varStatus="status">
 					<tr>
 						<td>${status.index + 1}</td>
-						<td>${Inventory.Vendor_ID}</td>
-						<td>${Inventory.Cost}</td>
-						<td>${Inventory.Quantity}</td>
-						<td>${Inventory.Jar_size}</td>
-						<td>${Inventory.Sell_By_Date}</td>
-						<td>${Inventory.Mushroom_Type}</td>
-						<td><a href="editInventory?id=${Inventory.Inventory_ID}">Edit</a>
+						<td>${inventory.vendor_ID}</td>
+						<td>${inventory.cost}</td>
+						<td>${inventory.quantity}</td>
+						<td>${inventory.jar_size}</td>
+						<td>${inventory.sell_By_Date}</td>
+						<td>${inventory.mushroom_Type}</td>
+						<td><a href="editInventory?id=${Inventory.inventoryId}">Edit</a>
 							&nbsp;&nbsp;&nbsp;&nbsp; <a
-							href="deleteInventory?id=${Inventory.Inventory_ID}">Delete</a></td>
+							href="deleteInventory?id=${Inventory.inventory_ID}">Delete</a></td>
 
 					</tr>
 				</c:forEach>
