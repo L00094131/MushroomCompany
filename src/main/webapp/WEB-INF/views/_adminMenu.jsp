@@ -17,6 +17,7 @@
 					<li><a href="customerForm">Manage Customers</a></li>
 					<li><a href="orderForm">Manage Orders</a></li>
 					<li><a href="productForm">Manage Products</a></li>
+					<li><a href="contactForm">Contact Messages</a></li>
 				</ul></li>
 			<li style="float: right"><a href='login'>Sign-In</a></li>
 		</ul>

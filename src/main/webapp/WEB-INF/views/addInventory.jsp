@@ -3,7 +3,7 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<title>Add/Edit Customer</title>
+<title>Add/Edit Inventory Items</title>
 
 <div id="wrapper">
 	<jsp:include page="_header.jsp" />
@@ -13,62 +13,51 @@
 		<div id="editadd-content">
 			<div id="signup-box">
 
-				<h1>New/Edit Customer</h1>
-				<form:form action="saveCustomer" method="post"
-					modelAttribute="customer">
+				<h1>New/Edit Inventory</h1>
+				<form:form action="saveInventory" method="post"
+					modelAttribute="inventory">
 					<table>
-						<form:hidden path="customer_id" />
+						<form:hidden path="Inventory_ID" />
 						<tr>
-							<td>Customer ID:</td>
+							<td>Vendor ID:</td>
 							<td><form:input
 									style="height:25px; width:230px; font-size:13pt;"
-									path="customer_ID" /></td>
+									path="Vendor_ID" /></td>
 						</tr>
 						<tr>
-							<td>Last Name:</td>
+							<td>Cost:</td>
 							<td><form:input
 									style="height:25px; width:230px; font-size:13pt;"
-									path="customer_last_name" /></td>
+									path="Cost" /></td>
 						</tr>
 						<tr>
-							<td>Email:</td>
+							<td>Quantity:</td>
 							<td><form:input
 									style="height:25px; width:230px; font-size:13pt;"
-									path="customer_email" /></td>
+									path="Quantity" /></td>
 						</tr>
 						<tr>
-							<td>Address:</td>
-							<td><form:input
-									style="height:25px; width:230px; font-size:13pt;"
-									path="customer_address" /></td>
-						</tr>
-						<tr>
-							<td>Telephone:</td>
-							<td><form:input
-									style="height:25px; width:230px; font-size:13pt;"
-									path="customer_phone_number" /></td>
-						</tr>
-						<tr>
-							<td>Password:</td>
-							<td><form:input
-									style="height:25px; width:230px; font-size:13pt;"
-									path="customer_password" /></td>
-						</tr>
-						<tr>
-							<td>Postcode:</td>
-							<td><form:input
-									style="height:25px; width:230px; font-size:13pt;"
-									path="customer_postcode" /></td>
-						</tr>
-						<tr>
-							<td>Type:</td>
+							<td>Jar Size:</td>
 							<td><form:select
 									style="height:25px; width:230px; font-size:13pt;"
-									path="customer_type">
+									path="Jar_size">
 									<form:option value="Not Selected">--SELECT--</form:option>
-									<form:option value="Primary Customer" label="Primary Customer" />
-									<form:option value="Normal Customer" label="Normal Customer" />
+									<form:option value="Small" label="Small" />
+									<form:option value="Medium" label="Medium" />
+									<form:option value="Large" label="Large" />
 								</form:select></td>
+						</tr>
+						<tr>
+							<td>Sell By Date:</td>
+							<td><form:input
+									style="height:25px; width:230px; font-size:13pt;"
+									path="Sell_By_Date" /></td>
+						</tr>
+						<tr>
+							<td>Mushroom Type:</td>
+							<td><form:input
+									style="height:25px; width:230px; font-size:13pt;"
+									path="Mushroom_Type" /></td>
 						</tr>
 						<tr>
 							<td colspan="2" align="right"><input type="submit"
