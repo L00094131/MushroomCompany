@@ -1,5 +1,7 @@
 package tests;
 
+import static org.junit.Assert.assertEquals;
+
 /*
  *  Author Michael McFadden
  *  Description Write junit tests
@@ -34,6 +36,30 @@ public class Vendor_Test {
 		Vendor vendor = new Vendor();
 		vendor.setVendor_name("Donegal Mushroom");
 		assertTrue(vendor.getVendor_name() == "Donegal Mushroom");
+	}
+	
+	
+	Contact contact = new Contact("123456789", "This is a sample message for the contact field", "testemail@lyit.ie",
+			"Eugene Robb");
+
+	@Test
+	public void testPhone() {
+		assertEquals("123456789", contact.getContact_telephone());
+	}
+
+	@Test
+	public void testMessage() {
+		assertEquals("This is a sample message for the contact field", contact.getContact_message());
+	}
+	
+	@Test
+	public void testEmail() {
+		assertEquals("testemail@lyit.ie", contact.getContact_email());
+	}
+	
+	@Test
+	public void testName() {
+		assertEquals("Eugene Robb", contact.getContact_name());
 	}
 	
 

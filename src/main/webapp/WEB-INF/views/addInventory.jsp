@@ -15,7 +15,11 @@
 
 				<h1>New/Edit Inventory</h1>
 				<form:form action="saveInventory" method="post"
+<<<<<<< HEAD
 					modelAttribute="inventory">
+=======
+					modelAttribute="Inventory"> 
+>>>>>>> branch 'master' of https://github.com/L00094131/MushroomCompany
 					<table>
 						<form:hidden path="Inventory_ID" />
 						<tr>

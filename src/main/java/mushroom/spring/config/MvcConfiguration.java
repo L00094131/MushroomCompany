@@ -14,7 +14,6 @@ import mushroom.spring.dao.InventoryDAOImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -52,16 +51,11 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	public DataSource getDataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://mushcompany.cprgcmiyeqkl.eu-west-1.rds.amazonaws.com:3306/mushroomcompany1");
-		dataSource.setUsername("mushroom");
-		dataSource.setPassword("mushroom1");
+		dataSource.setUrl(databaseConfig.Credentials.url);
+		dataSource.setUsername(databaseConfig.Credentials.username);
+		dataSource.setPassword(databaseConfig.Credentials.password);
 		
 		return dataSource;
-	}
-	
-	@Bean
-	public ContactDAO getContactDAO() {
-		return new ContactDAOImpl(getDataSource());
 	}
 
 	@Bean
@@ -70,14 +64,20 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	}
 	
 	@Bean
-	public InventoryDAO getInventoryDAO() {
-		return new InventoryDAOImpl(getDataSource());
+	public ContactDAO getContactDAO() {
+		return new ContactDAOImpl(getDataSource());
 	}
 	
 	
 	@Bean
 	public AdminSummaryDAO getAdminSummaryDAO() {
 		return new AdminSummaryDAOImpl(getDataSource());
+	}
+	
+	
+	@Bean
+	public InventoryDAO getInventoryDAO() {
+		return new InventoryDAOImpl(getDataSource());
 	}
 
 }
