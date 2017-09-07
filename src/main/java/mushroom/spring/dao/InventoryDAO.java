@@ -5,12 +5,11 @@ import java.util.List;
 import mushroom.spring.model.Inventory;
 
 public interface InventoryDAO {
-
-    public void saveOrUpdate_Inv(Inventory Inventory);
+    public void saveOrUpdateInventory(Inventory inventory);
     
-    public void delete_Inv(int Inventory_ID);
+    public void deleteInventory(int inventory_id);
      
-    public Inventory get_Inv(int Inventory_ID);
+    public Inventory getInventory(int inventory_id);
      
-    public List<Inventory> list_Inv();
+    public List<Inventory> listInventory();
 }

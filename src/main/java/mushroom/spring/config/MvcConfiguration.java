@@ -8,10 +8,10 @@ import mushroom.spring.dao.ContactDAO;
 import mushroom.spring.dao.ContactDAOImpl;
 import mushroom.spring.dao.CustomerDAO;
 import mushroom.spring.dao.CustomerDAOImpl;
-import mushroom.spring.dao.OrderDAO;
-import mushroom.spring.dao.OrderDAOImpl;
 import mushroom.spring.dao.InventoryDAO;
 import mushroom.spring.dao.InventoryDAOImpl;
+import mushroom.spring.dao.OrderDAO;
+import mushroom.spring.dao.OrderDAOImpl;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -80,7 +80,6 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	public AdminSummaryDAO getAdminSummaryDAO() {
 		return new AdminSummaryDAOImpl(getDataSource());
 	}
-	
 	
 	@Bean
 	public InventoryDAO getInventoryDAO() {

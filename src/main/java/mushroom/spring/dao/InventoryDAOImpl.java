@@ -14,7 +14,6 @@ import org.springframework.jdbc.core.RowMapper;
 import mushroom.spring.model.Inventory;
 
 public class InventoryDAOImpl implements InventoryDAO {
-	
 	private JdbcTemplate jdbcTemplate;
 
 	public InventoryDAOImpl(DataSource dataSource) {
@@ -22,45 +21,44 @@ public class InventoryDAOImpl implements InventoryDAO {
 	}
 
 	@Override
-	public void saveOrUpdate_Inv(Inventory inventory) {
-		if (inventory.getInventory_ID() > 0) {
+	public void saveOrUpdateInventory(Inventory inventory) {
+		if (inventory.getInventory_id() > 0) {
 			// update
-			String sql = "UPDATE Inventory SET Vendor_ID=?, Cost=?, Quantity=?, Jar-size=?, Sell_By_Date=?, Mushroom_Type=? WHERE Inventory_ID=?";
-			jdbcTemplate.update(sql, inventory.getVendor_ID(), inventory.getCost(),
-					inventory.getQuantity(), inventory.getJar_size(), inventory.getSell_By_Date(),
-					inventory.getMushroom_Type(), inventory.getInventory_ID());
+			String sql = "UPDATE Inventory1 SET vendor=?, cost=?, quantity=?, jar_size=?, sell_by_date=?, mushroom_type=? WHERE inventory_id=?";
+			jdbcTemplate.update(sql, inventory.getVendor(), inventory.getCost(), inventory.getQuantity(),
+					inventory.getJar_size(), inventory.getSell_by_date(), inventory.getMushroom_type(),
+					inventory.getInventory_id());
 		} else {
 			// insert
-			String sql = "INSERT INTO Inventory (Vendor_ID, Cost, Quantity, Jar_size, Sell_By_Date, Mushroom_Type) VALUES (?, ?, ?, ?, ?, ?)";
-			jdbcTemplate.update(sql, inventory.getVendor_ID(), inventory.getCost(),
-					inventory.getQuantity(), inventory.getJar_size(), inventory.getSell_By_Date(),
-					inventory.getMushroom_Type());
+			String sql = "INSERT INTO Inventory1 (vendor, cost, quantity, jar_size, sell_by_date, mushroom_type) VALUES (?, ?, ?, ?, ?, ?)";
+			jdbcTemplate.update(sql, inventory.getVendor(), inventory.getCost(), inventory.getQuantity(),
+					inventory.getJar_size(), inventory.getSell_by_date(), inventory.getMushroom_type());
 		}
 
 	}
 
 	@Override
-	public void delete_Inv(int Inventory_ID) {
-		String sql = "DELETE FROM Inventory WHERE Inventory_ID=?";
-		jdbcTemplate.update(sql, Inventory_ID);
+	public void deleteInventory(int inventory_id) {
+		String sql = "DELETE FROM Inventory1 WHERE inventory_id=?";
+		jdbcTemplate.update(sql, inventory_id);
 	}
 
 	@Override
-	public List<Inventory> list_Inv() {
-		String sql = "SELECT * FROM Inventory";
+	public List<Inventory> listInventory() {
+		String sql = "SELECT * FROM Inventory1";
 		List<Inventory> listInventory = jdbcTemplate.query(sql, new RowMapper<Inventory>() {
 
 			@Override
 			public Inventory mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Inventory aInventory = new Inventory();
 
-				aInventory.setInventory_ID(rs.getInt("Inventory_ID"));
-				aInventory.setVendor_ID(rs.getInt("Vendor_ID"));
-				aInventory.setCost(rs.getInt("Cost"));
-				aInventory.setQuantity(rs.getInt("Quantity"));
-				aInventory.setJar_size(rs.getString("Jar_size"));
-				aInventory.setSell_By_Date(rs.getString("Sell_By_Date"));
-				aInventory.setMushroom_Type(rs.getString("Mushroom_Type"));
+				aInventory.setInventory_id(rs.getInt("inventory_id"));
+				aInventory.setVendor(rs.getString("vendor"));
+				aInventory.setCost(rs.getString("cost"));
+				aInventory.setQuantity(rs.getString("quantity"));
+				aInventory.setJar_size(rs.getString("jar_size"));
+				aInventory.setSell_by_date(rs.getString("sell_by_date"));
+				aInventory.setMushroom_type(rs.getString("mushroom_type"));
 
 				return aInventory;
 			}
@@ -71,21 +69,21 @@ public class InventoryDAOImpl implements InventoryDAO {
 	}
 
 	@Override
-	public Inventory get_Inv(int Inventory_ID) {
-		String sql = "SELECT * FROM Inventory WHERE Inventory_ID=" + Inventory_ID;
+	public Inventory getInventory(int inventoryId) {
+		String sql = "SELECT * FROM Inventory1 WHERE inventory_id=" + inventoryId;
 		return jdbcTemplate.query(sql, new ResultSetExtractor<Inventory>() {
 
 			@Override
 			public Inventory extractData(ResultSet rs) throws SQLException, DataAccessException {
 				if (rs.next()) {
 					Inventory inventory = new Inventory();
-					inventory.setInventory_ID(rs.getInt("Inventory_ID"));
-					inventory.setVendor_ID(rs.getInt("Vendor_ID"));
-					inventory.setCost(rs.getInt("Cost"));
-					inventory.setQuantity(rs.getInt("Quantity"));
-					inventory.setJar_size(rs.getString("Jar_size"));
-					inventory.setSell_By_Date(rs.getString("Sell_By_Date"));
-					inventory.setMushroom_Type(rs.getString("Mushroom_Type"));
+					inventory.setInventory_id(rs.getInt("inventory_id"));
+					inventory.setVendor(rs.getString("vendor"));
+					inventory.setCost(rs.getString("cost"));
+					inventory.setQuantity(rs.getString("quantity"));
+					inventory.setJar_size(rs.getString("jar_size"));
+					inventory.setSell_by_date(rs.getString("sell_by_date"));
+					inventory.setMushroom_type(rs.getString("mushroom_type"));
 					return inventory;
 				}
 
@@ -94,4 +92,5 @@ public class InventoryDAOImpl implements InventoryDAO {
 
 		});
 	}
+
 }

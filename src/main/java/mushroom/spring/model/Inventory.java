@@ -9,161 +9,174 @@ package mushroom.spring.model;
  * 
  */
 public class Inventory {
-	private int Inventory_ID;
-	private int Vendor_ID;
-	private int Cost;
-	private int Quantity;
-	private String Jar_size;
-	private String Sell_By_Date;
-	private String Mushroom_Type;
+	private int inventory_id;
+	private String vendor;
+	private String cost;
+	private String quantity;
+	private String jar_size;
+	private String sell_by_date;
+	private String mushroom_type;
 
 	public Inventory() {
 	}
 
 	/**
-	 * This constructs the inventory with cost, quantity, jar size, sell by date and mushroom type
+	 * This constructs the inventory with cost, quantity, jar size, sell by date and
+	 * mushroom type
 	 * 
 	 * @param cost
-	 * 		cost of mushroom
+	 *            cost of mushroom
 	 * @param quantity
-	 * 		quantity of mushroom remaining
+	 *            quantity of mushroom remaining
 	 * @param jar_size
-	 * 		jar size small,medium,large
+	 *            jar size small,medium,large
 	 * @param sell_By_Date
-	 * 		contains date to sell by
+	 *            contains date to sell by
 	 * @param mushroom_Type
-	 * 		types of mushroom
+	 *            types of mushroom
 	 */
-	public Inventory(int inventory_id, int vendor_id, int cost, int quantity, String jar_size, String sell_By_Date, String mushroom_Type) {
-		
-		Inventory_ID = inventory_id;
-		Vendor_ID = vendor_id;
-		Cost = cost;
-		Quantity = quantity;
-		Jar_size = jar_size;
-		Sell_By_Date = sell_By_Date;
-		Mushroom_Type = mushroom_Type;
+	public Inventory(int inventory_id, String vendor, String cost, String quantity, String jar_size,
+			String sell_by_date, String mushroom_type) {
+		this.inventory_id = inventory_id;
+		this.vendor = vendor;
+		this.cost = cost;
+		this.quantity = quantity;
+		this.jar_size = jar_size;
+		this.sell_by_date = sell_by_date;
+		this.mushroom_type = mushroom_type;
 	}
-	
+
 	/**
 	 * Returns the Inventory ID of the inventory
+	 * 
 	 * @return inventory id
 	 */
-	public int getInventory_ID() {
-		return Inventory_ID;
+	public int getInventory_id() {
+		return inventory_id;
 	}
 
 	/**
 	 * This sets the Inventory ID of this Inventory
+	 * 
 	 * @param inventory_ID
-	 * 				the inventory id
+	 *            the inventory id
 	 */
-	public void setInventory_ID(int inventory_ID) {
-		Inventory_ID = inventory_ID;
+	public void setInventory_id(int inventory_id) {
+		this.inventory_id = inventory_id;
 	}
 
 	/**
 	 * Returns the Vendor ID
+	 * 
 	 * @return Vendor ID
 	 */
-	public int getVendor_ID() {
-		return Vendor_ID;
+	public String getVendor() {
+		return vendor;
 	}
 
 	/**
 	 * This sets the Vendor ID
+	 * 
 	 * @param vendor_ID
-	 * 				the vendor id
+	 *            the vendor id
 	 */
-	public void setVendor_ID(int vendor_ID) {
-		Vendor_ID = vendor_ID;
+	public void setVendor(String vendor) {
+		this.vendor = vendor;
 	}
 
 	/**
 	 * Returns the Cost
+	 * 
 	 * @return Cost
 	 */
-	public int getCost() {
-		return Cost;
+	public String getCost() {
+		return cost;
 	}
 
 	/**
 	 * This sets the cost of mushroom
+	 * 
 	 * @param cost
-	 * 			the mushroom cost
+	 *            the mushroom cost
 	 */
-	public void setCost(int cost) {
-		Cost = cost;
+	public void setCost(String cost) {
+		this.cost = cost;
 	}
 
 	/**
 	 * Returns the mushroom quantity remaining
+	 * 
 	 * @return Quantity
 	 */
-	public int getQuantity() {
-		return Quantity;
+	public String getQuantity() {
+		return quantity;
 	}
 
 	/**
-	 * This sets the quantity of mushrooms 
+	 * This sets the quantity of mushrooms
+	 * 
 	 * @param quantity
-	 * 			the mushroom quantity
+	 *            the mushroom quantity
 	 */
-	public void setQuantity(int quantity) {
-		Quantity = quantity;
+	public void setQuantity(String quantity) {
+		this.quantity = quantity;
 	}
 
 	/**
 	 * Returns the mushroom jar size
+	 * 
 	 * @return jar size
 	 */
 	public String getJar_size() {
-		return Jar_size;
+		return jar_size;
 	}
 
 	/**
 	 * This sets the jar size
+	 * 
 	 * @param jar_size
-	 * 				mushroom jar sizes
+	 *            mushroom jar sizes
 	 */
 	public void setJar_size(String jar_size) {
-		Jar_size = jar_size;
+		this.jar_size = jar_size;
 	}
 
 	/**
 	 * Returns the mushroom sell by date
+	 * 
 	 * @return sell by date
 	 */
-	public String getSell_By_Date() {
-		return Sell_By_Date;
+	public String getSell_by_date() {
+		return sell_by_date;
 	}
 
 	/**
 	 * This sets the sell by date of mushrooms
+	 * 
 	 * @param sell_By_Date
-	 * 				final date to sell mushrooms
+	 *            final date to sell mushrooms
 	 */
-	public void setSell_By_Date(String sell_By_Date) {
-		Sell_By_Date = sell_By_Date;
+	public void setSell_by_date(String sell_by_date) {
+		this.sell_by_date = sell_by_date;
 	}
 
 	/**
 	 * Returns the mushroom type
+	 * 
 	 * @return mushroom type
 	 */
-	public String getMushroom_Type() {
-		return Mushroom_Type;
+	public String getMushroom_type() {
+		return mushroom_type;
 	}
 
 	/**
 	 * This sets the type of mushroom
+	 * 
 	 * @param mushroom_Type
-	 * 				mushroom types
+	 *            mushroom types
 	 */
-	public void setMushroom_Type(String mushroom_Type) {
-		Mushroom_Type = mushroom_Type;
+	public void setMushroom_type(String mushroom_type) {
+		this.mushroom_type = mushroom_type;
 	}
 
 }
-
-

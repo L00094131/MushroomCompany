@@ -21,7 +21,7 @@ public class CustomerController {
 	@Autowired
 	private CustomerDAO customerDAO;
 
-	private static final Logger logger = Logger.getLogger(MainController.class);
+	private static final Logger logger = Logger.getLogger(CustomerController.class);
 
 	@RequestMapping(value = "/newCustomer", method = RequestMethod.GET)
 	public ModelAndView newCustomer(ModelAndView model) {

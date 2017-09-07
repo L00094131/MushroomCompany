@@ -163,7 +163,7 @@ public class MushroomCompanyTests {
 	//Test by Nico for Inventory
 	//No need to write Unit Test for Getters and Setters (no real functionality to test)
 	
-	@Test
+/*	@Test
 	public void InventoryConstructor() {
 		Inventory inventory = new Inventory(1, 200, 25, 0, "Medium", "12/02/17", "Test");
 		assertTrue(inventory.getVendor_ID() == 200);
@@ -172,9 +172,9 @@ public class MushroomCompanyTests {
 		assertTrue(inventory.getJar_size() == "Medium");
 		assertTrue(inventory.getSell_By_Date() == "12/02/17");
 		assertTrue(inventory.getMushroom_Type() == "Test");
-	}	
+	}*/	
 	
-	@Test
+/*	@Test
 	public void testsetJar_size() {
 		Inventory inventory = new Inventory();
 		inventory.setJar_size("Large");
@@ -185,7 +185,7 @@ public class MushroomCompanyTests {
 		Inventory inventory = new Inventory();
 		inventory.setMushroom_Type("RoundMushroom");
 		assertTrue(inventory.getMushroom_Type() == "RoundMushroom");
-	}
+	}*/
 	
 	
 	//Order tests by John

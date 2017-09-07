@@ -10,11 +10,11 @@
 
 	<div id="content-wrapper">
 		<h1>Manage Inventory</h1>
-		<p>Below is a list of all inventory that is currently in stock. Here you can edit/delete inventory items.</p>
-		<p>To add an inventory item to the database click <a href="newInventory">here</a>.</p>
-			<table class="table">
-				<th>Inventory ID</th>
-				<th>Vendor ID</th>
+		<p>Below is a list of all Inventory. Here you and edit/delete Inventory.</p>
+		<p>To add a Inventory to the database click <a href="newInventory">here</a>.</p>
+			<table class="table1">
+				<th>ID</th>
+				<th>Vendor</th>
 				<th>Cost</th>
 				<th>Quantity</th>
 				<th>Jar Size</th>
@@ -25,16 +25,15 @@
 				<c:forEach var="inventory" items="${listInventory}" varStatus="status">
 					<tr>
 						<td>${status.index + 1}</td>
-						<td>${inventory.vendor_ID}</td>
+						<td>${inventory.vendor}</td>
 						<td>${inventory.cost}</td>
 						<td>${inventory.quantity}</td>
 						<td>${inventory.jar_size}</td>
-						<td>${inventory.sell_By_Date}</td>
-						<td>${inventory.mushroom_Type}</td>
-						<td><a href="editInventory?id=${Inventory.inventoryId}">Edit</a>
+						<td>${inventory.sell_by_date}</td>
+						<td>${inventory.mushroom_type}</td>
+						<td><a href="editInventory?id=${inventory.inventory_id}">Edit</a>
 							&nbsp;&nbsp;&nbsp;&nbsp; <a
-							href="deleteInventory?id=${Inventory.inventory_ID}">Delete</a></td>
-
+							href="deleteInventory?id=${inventory.inventory_id}">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</table>

@@ -3,7 +3,7 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<title>Add/Edit Inventory Items</title>
+<title>Add/Edit Inventory</title>
 
 <div id="wrapper">
 	<jsp:include page="_header.jsp" />
@@ -15,51 +15,44 @@
 
 				<h1>New/Edit Inventory</h1>
 				<form:form action="saveInventory" method="post"
-
 					modelAttribute="inventory">
-
 					<table>
-						<form:hidden path="Inventory_ID" />
+						<form:hidden path="inventory_id" />
 						<tr>
-							<td>Vendor ID:</td>
+							<td>Vendor:</td>
 							<td><form:input
 									style="height:25px; width:230px; font-size:13pt;"
-									path="Vendor_ID" /></td>
+									path="vendor" /></td>
 						</tr>
 						<tr>
 							<td>Cost:</td>
 							<td><form:input
 									style="height:25px; width:230px; font-size:13pt;"
-									path="Cost" /></td>
+									path="cost" /></td>
 						</tr>
 						<tr>
-							<td>Quantity:</td>
+							<td>quantity:</td>
 							<td><form:input
 									style="height:25px; width:230px; font-size:13pt;"
-									path="Quantity" /></td>
+									path="quantity" /></td>
 						</tr>
 						<tr>
-							<td>Jar Size:</td>
-							<td><form:select
-									style="height:25px; width:230px; font-size:13pt;"
-									path="Jar_size">
-									<form:option value="Not Selected">--SELECT--</form:option>
-									<form:option value="Small" label="Small" />
-									<form:option value="Medium" label="Medium" />
-									<form:option value="Large" label="Large" />
-								</form:select></td>
-						</tr>
-						<tr>
-							<td>Sell By Date:</td>
+							<td>jar_size:</td>
 							<td><form:input
 									style="height:25px; width:230px; font-size:13pt;"
-									path="Sell_By_Date" /></td>
+									path="jar_size" /></td>
 						</tr>
 						<tr>
-							<td>Mushroom Type:</td>
+							<td>sell_by_date:</td>
 							<td><form:input
 									style="height:25px; width:230px; font-size:13pt;"
-									path="Mushroom_Type" /></td>
+									path="sell_by_date" /></td>
+						</tr>
+						<tr>
+							<td>mushroom_type:</td>
+							<td><form:input
+									style="height:25px; width:230px; font-size:13pt;"
+									path="mushroom_type" /></td>
 						</tr>
 						<tr>
 							<td colspan="2" align="right"><input type="submit"
