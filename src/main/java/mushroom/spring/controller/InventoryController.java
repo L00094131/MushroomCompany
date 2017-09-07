@@ -23,7 +23,7 @@ public class InventoryController {
 	@RequestMapping(value = "/newInventory", method = RequestMethod.GET)
 	public ModelAndView newInventory(ModelAndView model) {
 		Inventory newInventory = new Inventory();
-		model.addObject("Inventory", newInventory);  // changed 'inv' to 'Inv'
+		model.addObject("inventory", newInventory);  // changed 'inv' to 'Inv'
 		model.setViewName("addInventory");
 		return model;
 	}
@@ -54,7 +54,7 @@ public class InventoryController {
 		int inventoryId = Integer.parseInt(request.getParameter("id"));
 		Inventory inventory = inventoryDAO.get_Inv(inventoryId);
 		ModelAndView model = new ModelAndView("addInventory");
-		model.addObject("inventory", inventory);
+		model.addObject("Inventory", inventory);
 		return model;
 	}
 }
