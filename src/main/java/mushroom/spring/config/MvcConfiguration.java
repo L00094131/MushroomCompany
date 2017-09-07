@@ -6,6 +6,8 @@ import mushroom.spring.dao.ContactDAO;
 import mushroom.spring.dao.ContactDAOImpl;
 import mushroom.spring.dao.CustomerDAO;
 import mushroom.spring.dao.CustomerDAOImpl;
+import mushroom.spring.dao.InventoryDAO;
+import mushroom.spring.dao.InventoryDAOImpl;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -52,6 +54,11 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		
 		return dataSource;
 	}
+	
+	@Bean
+	public ContactDAO getContactDAO() {
+		return new ContactDAOImpl(getDataSource());
+	}
 
 	@Bean
 	public CustomerDAO getCustomerDAO() {
@@ -59,8 +66,8 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	}
 	
 	@Bean
-	public ContactDAO getContactDAO() {
-		return new ContactDAOImpl(getDataSource());
+	public InventoryDAO getInventoryDAO() {
+		return new InventoryDAOImpl(getDataSource());
 	}
 
 }

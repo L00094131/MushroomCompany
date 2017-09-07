@@ -34,8 +34,9 @@ public class Inventory {
 	 * @param mushroom_Type
 	 * 		types of mushroom
 	 */
-	public Inventory(int cost, int quantity, String jar_size, String sell_By_Date, String mushroom_Type) {
-		super();
+	public Inventory(int vendor_id, int cost, int quantity, String jar_size, String sell_By_Date, String mushroom_Type) {
+		
+		Vendor_ID = vendor_id;
 		Cost = cost;
 		Quantity = quantity;
 		Jar_size = jar_size;
