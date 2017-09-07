@@ -19,10 +19,10 @@
 					<table>
 						<form:hidden path="customer_id" />
 						<tr>
-							<td>Customer ID:</td>
+							<td>First Name:</td>
 							<td><form:input
 									style="height:25px; width:230px; font-size:13pt;"
-									path="customer_ID" /></td>
+									path="customer_first_name" /></td>
 						</tr>
 						<tr>
 							<td>Last Name:</td>

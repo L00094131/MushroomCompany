@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import mushroom.spring.dao.InventoryDAO;
 import mushroom.spring.model.Inventory;
 
+
 @Controller("/inventoryForm")
 public class InventoryController {
 	@Autowired

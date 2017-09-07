@@ -177,7 +177,6 @@
 
 		</div>
 		<div id="signup-right-side">
-		<br>
 			<h2>Reasons to sign up</h2>
 			<ul>
 				<li>Customer support</li>
@@ -189,8 +188,9 @@
 				<li>Mushroom jars</li>
 			</ul>
 			<br> <img
-				src="<c:url value="/resources/images/signupmush.jpg"/>"> <img
-				src="<c:url value="/resources/images/signupmush2.jpg"/>">
+				src="<c:url value="/resources/images/signupmush.jpg"/>">
+
+
 
 		</div>
 
