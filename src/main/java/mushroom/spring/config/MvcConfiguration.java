@@ -4,6 +4,8 @@ import javax.sql.DataSource;
 
 import mushroom.spring.dao.CustomerDAO;
 import mushroom.spring.dao.CustomerDAOImpl;
+import mushroom.spring.dao.OrderDAO;
+import mushroom.spring.dao.OrderDAOImpl;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -54,6 +56,14 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	@Bean
 	public CustomerDAO getCustomerDAO() {
 		return new CustomerDAOImpl(getDataSource());
+	}
+	
+	@Bean 
+	public OrderDAO getOrderDAO() {
+		return new OrderDAOImpl(getDataSource());
+		
+		
+		
 	}
 
 }

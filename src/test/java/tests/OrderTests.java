@@ -15,10 +15,10 @@ public class OrderTests {
 		assertTrue(order.getInventory_ID() == 01);
 		assertTrue(order.getCustomer_ID() == 01);
 		assertTrue(order.getMushroom_Type() == "Button Mushroom");
-		assertTrue(order.getJar_Size() == "Medium");
+		assertTrue(order.getJar_size() == "Medium");
 		assertTrue(order.getQuantity() == "3");		
 		assertTrue(order.getSell_By_Date() == "31st August");
-		assertTrue(order.getDelivery() == "20th August");
+		assertTrue(order.getDeliver_Date() == "20th August");
 	}	
 	
 	@Test
