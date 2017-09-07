@@ -11,7 +11,7 @@ public class InventoryTests {
 	
 	@Test
 	public void constructor() {
-		Inventory inventory = new Inventory(4052, 7000, "medium", "10-12-2017", "truffles");
+		Inventory inventory = new Inventory(4052, 7000, 0, "10-12-2017", "truffles", null);
 		assertTrue(inventory.getCost() == 4052);
 		assertTrue(inventory.getQuantity() == 7000);
 		assertTrue(inventory.getJar_size() == "medium");
@@ -31,4 +31,5 @@ public class InventoryTests {
 		inventory.setMushroom_Type("RoundMushroom");
 		assertTrue(inventory.getMushroom_Type() == "RoundMushroom");
 	}
+	
 }

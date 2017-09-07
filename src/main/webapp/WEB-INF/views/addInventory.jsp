@@ -15,7 +15,7 @@
 
 				<h1>New/Edit Inventory</h1>
 				<form:form action="saveInventory" method="post"
-					modelAttribute="Inventory">  //changed to I from i
+					modelAttribute="Inventory"> 
 					<table>
 						<form:hidden path="Inventory_ID" />
 						<tr>

@@ -14,7 +14,6 @@ import mushroom.spring.dao.InventoryDAOImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -58,11 +57,6 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		
 		return dataSource;
 	}
-	
-	@Bean
-	public ContactDAO getContactDAO() {
-		return new ContactDAOImpl(getDataSource());
-	}
 
 	@Bean
 	public CustomerDAO getCustomerDAO() {
@@ -70,14 +64,20 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	}
 	
 	@Bean
-	public InventoryDAO getInventoryDAO() {
-		return new InventoryDAOImpl(getDataSource());
+	public ContactDAO getContactDAO() {
+		return new ContactDAOImpl(getDataSource());
 	}
 	
 	
 	@Bean
 	public AdminSummaryDAO getAdminSummaryDAO() {
 		return new AdminSummaryDAOImpl(getDataSource());
+	}
+	
+	
+	@Bean
+	public InventoryDAO getInventoryDAO() {
+		return new InventoryDAOImpl(getDataSource());
 	}
 
 }
