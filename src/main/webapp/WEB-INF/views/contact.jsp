@@ -8,6 +8,7 @@
 
 	<div id="content-wrapper">
 		<div id="content">
+			<h1>Contact Us</h1>
 			<form:form name="contactForm" action="contactConfirmation"
 				method="post" modelAttribute="contact">
 				<table>
