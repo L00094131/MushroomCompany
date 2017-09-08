@@ -7,14 +7,14 @@
 
 <div id="wrapper">
 	<jsp:include page="_header.jsp" />
-	<jsp:include page="_adminMenu.jsp" />
+	<jsp:include page="customerMenu.jsp" />
 
 	<div id="content-wrapper">
 		<div id="editadd-content">
 			<div id="signup-box">
 
 				<h1>New Order</h1>
-				<form:form action="saveOrder" method="post" modelAttribute="order">
+				<form:form action="orderConfirmation" method="post" modelAttribute="order">
 					<table>
 						<form:hidden path="order_id" />
 						<tr>

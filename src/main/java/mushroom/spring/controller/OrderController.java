@@ -20,19 +20,17 @@ public class OrderController {
 	@Autowired
 	private OrderDAO orderDAO;
 
-	@RequestMapping(value = "/addOrder", method = RequestMethod.GET)
+	@RequestMapping(value = "/newOrder", method = RequestMethod.GET)
 	public ModelAndView newOrder(ModelAndView model) {
 		Order newOrder = new Order();
 		model.addObject("order", newOrder);
 		model.setViewName("addOrder");
 		return model;
 	}
-	
-	
 
 	@RequestMapping(value = "/orderForm")
-	public ModelAndView listOrder(ModelAndView model) throws IOException {
-		List<Order> listOrder = orderDAO.list();
+	public ModelAndView listInventory(ModelAndView model) throws IOException {
+		List<Order> listOrder = orderDAO.listOrder();
 		model.addObject("listOrder", listOrder);
 		model.setViewName("orderForm");
 		return model;
@@ -40,21 +38,21 @@ public class OrderController {
 
 	@RequestMapping(value = "/saveOrder", method = RequestMethod.POST)
 	public ModelAndView saveOrder(@ModelAttribute Order order) {
-		orderDAO.saveOrUpdate(order);
+		orderDAO.saveOrUpdateOrder(order);
 		return new ModelAndView("redirect:/orderForm");
 	}
 
 	@RequestMapping(value = "/deleteOrder", method = RequestMethod.GET)
 	public ModelAndView deleteOrder(HttpServletRequest request) {
 		int orderId = Integer.parseInt(request.getParameter("id"));
-		orderDAO.delete(orderId);
+		orderDAO.deleteOrder(orderId);
 		return new ModelAndView("redirect:/orderForm");
 	}
 
 	@RequestMapping(value = "/editOrder", method = RequestMethod.GET)
 	public ModelAndView editOrder(HttpServletRequest request) {
 		int orderId = Integer.parseInt(request.getParameter("id"));
-		Order order = orderDAO.get(orderId);
+		Order order = orderDAO.getOrder(orderId);
 		ModelAndView model = new ModelAndView("addOrder");
 		model.addObject("order", order);
 		return model;

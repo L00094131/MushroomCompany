@@ -187,7 +187,7 @@ public class MushroomCompanyTests {
 		assertTrue(inventory.getMushroom_Type() == "RoundMushroom");
 	}*/
 	
-	
+	/*
 	//Order tests by John
 	@Test
 	public void Order() {
@@ -213,7 +213,7 @@ public class MushroomCompanyTests {
 		Order order = new Order();
 		order.setOrder_ID(01);
 		assertTrue(order.getOrder_ID() == 01);
-	}
+	}*/
 
 }
 

@@ -14,8 +14,8 @@
 			<li><a href="about">About</a></li>
 			<li class="has-sub"><a href="#">Orders</a>
 				<ul>
-					<li><a href=" ">View Order</a></li>  <!--Order confirmation page needed-->
-					<li><a href="addOrder">Create Order</a></li>
+					<li><a href="">View Order</a></li>  <!--Order confirmation page needed-->
+					<li><a href="addOrderCustomer">Create Order</a></li>
 				</ul></li>
 			<li style="float: right"><a href='login'>Sign-In</a></li>
 		</ul>

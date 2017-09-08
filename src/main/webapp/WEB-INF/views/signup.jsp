@@ -188,8 +188,8 @@
 				<li>Mushroom jars</li>
 			</ul>
 			<br> <img
-				src="<c:url value="/resources/images/signupmush.jpg"/>">
-
+				src="<c:url value="/resources/images/signupmush.jpg"/>"> <img
+				src="<c:url value="/resources/images/signupmush2.jpg"/>">
 
 
 		</div>

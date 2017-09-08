@@ -21,63 +21,42 @@ public class OrderDAOImpl implements OrderDAO {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
-	public void saveOrUpdate(Order order) {
-		if (order.getOrder_ID() > 0) {
+	@Override
+	public void saveOrUpdateOrder(Order order) {
+		if (order.getOrder_id() > 0) {
 			// update
-			String sql = "UPDATE Orders SET Mushroom_Type=?, Jar_size=?, Quantity=?, Sell_By_Date=?, Deliver_Date=? WHERE Order_ID=?";
-			jdbcTemplate.update(sql, order.getMushroom_Type(), order.getJar_size(), order.getQuantity(),
-					order.getSell_By_Date(), order.getDeliver_Date()
-					, order.getOrder_ID());
+			String sql = "UPDATE Orders SET mushroom_type=?, jar_size=?, quantity=?, name=?, address=? WHERE order_id=?";
+			jdbcTemplate.update(sql, order.getMushroom_type(), order.getJar_size(), order.getQuantity(),
+					order.getName(), order.getAddress(), order.getOrder_id());
 		} else {
 			// insert
-			String sql = "INSERT INTO Orders (Mushroom_Type, Jar_size, Quantity, Sell_By_Date, Deliver_Date) VALUES (?, ?, ?, ?, ?)";
-			jdbcTemplate.update(sql, order.getMushroom_Type(), order.getJar_size(), order.getQuantity(),
-					order.getSell_By_Date(), order.getDeliver_Date());
+			String sql = "INSERT INTO Orders (mushroom_type, jar_size, quantity, name, address) VALUES (?, ?, ?, ?, ?)";
+			jdbcTemplate.update(sql, order.getMushroom_type(), order.getJar_size(), order.getQuantity(),
+					order.getName(), order.getAddress());
 		}
-
 	}
 
-	public void delete(int Order_ID) {
-		String sql = "DELETE FROM Orders WHERE Order_ID=?";
-		jdbcTemplate.update(sql,Order_ID);
+	@Override
+	public void deleteOrder(int order_id) {
+		String sql = "DELETE FROM Orders WHERE order_id=?";
+		jdbcTemplate.update(sql, order_id);
 	}
 
-	public List<Order> list() {
-		String sql = "SELECT * FROM Orders";
-		List<Order> listOrder = jdbcTemplate.query(sql, new RowMapper<Order>() {
-
-			@Override
-			public Order mapRow(ResultSet rs, int rowNum) throws SQLException {
-				Order aOrder = new Order();
-
-				aOrder.setMushroom_Type(rs.getString("Mushroom_Type"));
-				aOrder.setJar_size(rs.getString("Jar_size"));
-				aOrder.setQuantity(rs.getString("Quantity"));
-				aOrder.setSell_By_Date(rs.getString("Sell_By_Date"));
-				aOrder.setDeliver_Date(rs.getString("Deliver_Date"));
-				
-
-				return aOrder;
-			}
-
-		});
-
-		return listOrder;
-	}
-
-	public Order get(int orderId) {
-		String sql = "SELECT * FROM Orders WHERE Order_ID=" + orderId;
+	@Override
+	public Order getOrder(int order_id) {
+		String sql = "SELECT * FROM Orders WHERE order_id=" + order_id;
 		return jdbcTemplate.query(sql, new ResultSetExtractor<Order>() {
 
 			@Override
 			public Order extractData(ResultSet rs) throws SQLException, DataAccessException {
 				if (rs.next()) {
-					 Order order = new Order();
-					 order.setMushroom_Type(rs.getString("Mushroom_Type"));
-					 order.setJar_size(rs.getString("Jar_size"));
-					 order.setQuantity(rs.getString("Quantity"));
-					 order.setSell_By_Date(rs.getString("Sell_By_Date"));
-					 order.setDeliver_Date(rs.getString("Deliver_Date"));
+					Order order = new Order();
+					order.setOrder_id(rs.getInt("order_id"));
+					order.setQuantity(rs.getString("quantity"));
+					order.setJar_size(rs.getString("jar_size"));
+					order.setMushroom_type(rs.getString("mushroom_type"));
+					order.setName(rs.getString("name"));
+					order.setAddress(rs.getString("address"));
 					return order;
 				}
 
@@ -85,6 +64,30 @@ public class OrderDAOImpl implements OrderDAO {
 			}
 
 		});
+	}
+
+	@Override
+	public List<Order> listOrder() {
+		String sql = "SELECT * FROM Orders";
+		List<Order> listOrder = jdbcTemplate.query(sql, new RowMapper<Order>() {
+
+			@Override
+			public Order mapRow(ResultSet rs, int rowNum) throws SQLException {
+				Order aOrder = new Order();
+
+				aOrder.setOrder_id(rs.getInt("order_id"));
+				aOrder.setQuantity(rs.getString("quantity"));
+				aOrder.setJar_size(rs.getString("jar_size"));
+				aOrder.setMushroom_type(rs.getString("mushroom_type"));
+				aOrder.setName(rs.getString("name"));
+				aOrder.setAddress(rs.getString("address"));
+
+				return aOrder;
+			}
+
+		});
+
+		return listOrder;
 	}
 
 }

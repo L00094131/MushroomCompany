@@ -6,11 +6,11 @@ import mushroom.spring.model.Order;
 
 public interface OrderDAO {
 	
-	  public void saveOrUpdate(Order order);
-	     
-	    public void delete(int order_Id);
-	     
-	    public Order get(int order_Id);
-	     
-	    public List<Order> list();
+    public void saveOrUpdateOrder(Order order);
+    
+    public void deleteOrder(int order_id);
+     
+    public Order getOrder(int order_id);
+     
+    public List<Order> listOrder();
 }
