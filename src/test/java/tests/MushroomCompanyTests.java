@@ -163,18 +163,18 @@ public class MushroomCompanyTests {
 	//Test by Nico for Inventory
 	//No need to write Unit Test for Getters and Setters (no real functionality to test)
 	
-/*	@Test
+	@Test
 	public void InventoryConstructor() {
-		Inventory inventory = new Inventory(1, 200, 25, 0, "Medium", "12/02/17", "Test");
-		assertTrue(inventory.getVendor_ID() == 200);
-		assertTrue(inventory.getCost() == 25);
-		assertTrue(inventory.getQuantity() == 0);
+		Inventory inventory = new Inventory(1, "Sample Vendor", "250", "15", "Medium", "12/02/17", "Button Mushroom");
+		assertTrue(inventory.getVendor() == "Sample Vendor");
+		assertTrue(inventory.getCost() == "250");
+		assertTrue(inventory.getQuantity() == "15");
 		assertTrue(inventory.getJar_size() == "Medium");
-		assertTrue(inventory.getSell_By_Date() == "12/02/17");
-		assertTrue(inventory.getMushroom_Type() == "Test");
-	}*/	
+		assertTrue(inventory.getSell_by_date() == "12/02/17");
+		assertTrue(inventory.getMushroom_type() == "Button Mushroom");
+	}
 	
-/*	@Test
+	@Test
 	public void testsetJar_size() {
 		Inventory inventory = new Inventory();
 		inventory.setJar_size("Large");
@@ -183,37 +183,35 @@ public class MushroomCompanyTests {
 	@Test
 	public void testgetMushroom_Type() {
 		Inventory inventory = new Inventory();
-		inventory.setMushroom_Type("RoundMushroom");
-		assertTrue(inventory.getMushroom_Type() == "RoundMushroom");
-	}*/
+		inventory.setMushroom_type("Round Mushroom");
+		assertTrue(inventory.getMushroom_type() == "Round Mushroom");
+	}
 	
-	/*
+	
 	//Order tests by John
 	@Test
 	public void Order() {
-		Order order = new Order(01, 01, 01, "Button Mushroom", "Medium", "3", "31st August", "20th August");
-		assertTrue(order.getOrder_ID() == 01);
-		assertTrue(order.getInventory_ID() == 01);
-		assertTrue(order.getCustomer_ID() == 01);
-		assertTrue(order.getMushroom_Type() == "Button Mushroom");
-		assertTrue(order.getJar_size() == "Medium");
-		assertTrue(order.getQuantity() == "3");		
-		assertTrue(order.getSell_By_Date() == "31st August");
-		assertTrue(order.getDeliver_Date() == "20th August");
+		Order order = new Order(01, "50", "Large", "Button Mushroom", "John", "Donegal");
+		assertTrue(order.getOrder_id() == 01);
+		assertTrue(order.getMushroom_type() == "Button Mushroom");
+		assertTrue(order.getJar_size() == "Large");
+		assertTrue(order.getQuantity() == "50");	
+		assertTrue(order.getName()=="John");
+		assertTrue(order.getAddress()=="Donegal");
 	}	
 	
 	@Test
 	public void testsetOrder_ID() {
 		Order order = new Order();
-		order.setOrder_ID(01);
-		assertTrue(order.getOrder_ID() == 01);
+		order.setOrder_id(01);
+		assertTrue(order.getOrder_id() == 01);
 	}
 	@Test
 	public void testgetOrder_ID() {
 		Order order = new Order();
-		order.setOrder_ID(01);
-		assertTrue(order.getOrder_ID() == 01);
-	}*/
+		order.setOrder_id(01);
+		assertTrue(order.getOrder_id() == 01);
+	}
 
 }
 
