@@ -11,9 +11,24 @@
 	<div id="content-wrapper">
 		<div id="content">
 			<h1>Welcome to the Customer page</h1>
+			
+			<p>This is sample text, this is sample text, this is sample
+				text, this is sample textThis is sample text, this is sample text, this is sample
+				text, this is sample textThis is sample text, this is sample text, this is sample
+				text, this is sample textThis is sample text, this is sample text, this is sample
+				text, this is sample textThis is sample text, this is sample text, this is sample
+				text, this is sample textThis is sample text, this is sample text, this is sample
+				text, this is sample textThis is sample text, this is sample text, this is sample
+				text, this is sample textThis is sample text, this is sample text, this is sample
+				text, this is sample textThis is sample text, this is sample text.</p>
 			<h2>Enjoy your stay</h2>
 
 			
+		</div>
+		
+		<div id="mushroom-group">
+			<img src="<c:url value="/resources/images/mushroom-group.png"/>" height="300" width="700">
+
 		</div>
 		<jsp:include page="_footer.jsp" />
 	</div>
