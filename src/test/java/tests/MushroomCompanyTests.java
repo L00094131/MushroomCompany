@@ -191,13 +191,15 @@ public class MushroomCompanyTests {
 	//Order tests by John
 	@Test
 	public void Order() {
-		Order order = new Order(01, "50", "Large", "Button Mushroom", "John", "Donegal");
+		Order order = new Order(01, "50", "Large", "Button Mushroom", "John", "Donegal", "150.00");
 		assertTrue(order.getOrder_id() == 01);
 		assertTrue(order.getMushroom_type() == "Button Mushroom");
 		assertTrue(order.getJar_size() == "Large");
 		assertTrue(order.getQuantity() == "50");	
 		assertTrue(order.getName()=="John");
 		assertTrue(order.getAddress()=="Donegal");
+		assertTrue(order.getPrice()=="150.00");
+
 	}	
 	
 	@Test

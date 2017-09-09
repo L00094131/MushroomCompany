@@ -14,13 +14,12 @@
 	<jsp:include page="_menu.jsp" />
 
 	<div id="content-wrapper">
-		<div id="content">
 			<h2>Our Products</h2>
 			<p>This is the range of mushrooms and truffle's we at the
 				Mushroom Company provide We strive to provide the best in quality
 				and freshness to our customers.</p>
 
-			<TABLE width="850" >
+			<TABLE>
 				<TR>
 					<TD><h3>Button Mushrooms</h3></TD>
 				</TR>
@@ -161,5 +160,4 @@
 		<jsp:include page="_footer.jsp" />
 
 	</div>
-</div>
 </html>

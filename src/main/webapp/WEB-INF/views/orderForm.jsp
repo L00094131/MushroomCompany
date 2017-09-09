@@ -10,7 +10,8 @@
 
 	<div id="content-wrapper">
 		<h1>Manage Orders</h1>
-		<p>Below is a list of all orders made on the website. You can edit the orders here. You can also delete the order once processed.</p>
+		<p>Below is a list of all orders made on the website. You can edit
+			the orders here. You can also delete the order once processed.</p>
 		<p>
 			To add orders to the database click <a href="newOrder">here</a>.
 		</p>
@@ -21,6 +22,7 @@
 			<th>Quantity</th>
 			<th>Name</th>
 			<th>Address</th>
+			<th>Price</th>
 			<th>Action</th>
 
 			<c:forEach var="order" items="${listOrder}" varStatus="status">
@@ -31,6 +33,7 @@
 					<td>${order.quantity}</td>
 					<td>${order.name}</td>
 					<td>${order.address}</td>
+					<td>${order.price}</td>
 					<td><a href="editOrder?id=${order.order_id}">Edit</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
 						href="deleteOrder?id=${order.order_id}">Delete</a></td>

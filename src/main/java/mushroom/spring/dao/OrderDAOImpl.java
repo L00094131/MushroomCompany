@@ -25,14 +25,14 @@ public class OrderDAOImpl implements OrderDAO {
 	public void saveOrUpdateOrder(Order order) {
 		if (order.getOrder_id() > 0) {
 			// update
-			String sql = "UPDATE Orders SET mushroom_type=?, jar_size=?, quantity=?, name=?, address=? WHERE order_id=?";
+			String sql = "UPDATE Orders SET mushroom_type=?, jar_size=?, quantity=?, name=?, address=?, price=? WHERE order_id=?";
 			jdbcTemplate.update(sql, order.getMushroom_type(), order.getJar_size(), order.getQuantity(),
-					order.getName(), order.getAddress(), order.getOrder_id());
+					order.getName(), order.getAddress(), order.getPrice(), order.getOrder_id());
 		} else {
 			// insert
-			String sql = "INSERT INTO Orders (mushroom_type, jar_size, quantity, name, address) VALUES (?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO Orders (mushroom_type, jar_size, quantity, name, address, price) VALUES (?, ?, ?, ?, ?, ?)";
 			jdbcTemplate.update(sql, order.getMushroom_type(), order.getJar_size(), order.getQuantity(),
-					order.getName(), order.getAddress());
+					order.getName(), order.getAddress(), order.getPrice());
 		}
 	}
 
@@ -57,6 +57,7 @@ public class OrderDAOImpl implements OrderDAO {
 					order.setMushroom_type(rs.getString("mushroom_type"));
 					order.setName(rs.getString("name"));
 					order.setAddress(rs.getString("address"));
+					order.setPrice(rs.getString("price"));
 					return order;
 				}
 
@@ -81,6 +82,7 @@ public class OrderDAOImpl implements OrderDAO {
 				aOrder.setMushroom_type(rs.getString("mushroom_type"));
 				aOrder.setName(rs.getString("name"));
 				aOrder.setAddress(rs.getString("address"));
+				aOrder.setPrice(rs.getString("price"));
 
 				return aOrder;
 			}

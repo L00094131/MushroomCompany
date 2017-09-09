@@ -15,6 +15,7 @@ public class Order {
 	private String mushroom_type;
 	private String name;
 	private String address;
+	private String price;
 
 	public Order() {
 	}
@@ -29,13 +30,15 @@ public class Order {
 	 * @param Quantity
 	 *            quantity of product to be ordered by customer
 	 */
-	public Order(int order_id, String quantity, String jar_size, String mushroom_type, String name, String address) {
+	public Order(int order_id, String quantity, String jar_size, String mushroom_type, String name, String address,
+			String price) {
 		this.order_id = order_id;
 		this.quantity = quantity;
 		this.jar_size = jar_size;
 		this.mushroom_type = mushroom_type;
 		this.name = name;
 		this.address = address;
+		this.price = price;
 	}
 
 	// getter and setters
@@ -126,5 +129,13 @@ public class Order {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
 	}
 }
