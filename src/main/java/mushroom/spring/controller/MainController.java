@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+
 import org.apache.log4j.Logger;
 
 
@@ -49,7 +51,7 @@ public class MainController {
 	}
 
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
-	public String about() {
+	public ModelAndView about() throws Exception {
 		// logs debug message
 		if (logger.isDebugEnabled()) {
 			logger.debug("about method executed.");
@@ -58,7 +60,11 @@ public class MainController {
 		//logs exception
 		logger.error("about method failed to execute.", new Exception("Method fail"));
 		}
-	    return "about";
+		
+		
+		ModelAndView model = new ModelAndView("about");
+		
+	    return model;
 	}
 	
 	@RequestMapping(value="/products", method = RequestMethod.GET)
@@ -132,4 +138,7 @@ public class MainController {
 		customerDAO.saveOrUpdate(customer);
 		return "signupConfirmation";
 	}
+	
+
+	
 }
