@@ -2,8 +2,6 @@ package mushroom.spring.config;
 
 import javax.sql.DataSource;
 
-import mushroom.spring.dao.AdminSummaryDAO;
-import mushroom.spring.dao.AdminSummaryDAOImpl;
 import mushroom.spring.dao.ContactDAO;
 import mushroom.spring.dao.ContactDAOImpl;
 import mushroom.spring.dao.CustomerDAO;
@@ -75,11 +73,6 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		return new ContactDAOImpl(getDataSource());
 	}
 	
-	
-	@Bean
-	public AdminSummaryDAO getAdminSummaryDAO() {
-		return new AdminSummaryDAOImpl(getDataSource());
-	}
 	
 	@Bean
 	public InventoryDAO getInventoryDAO() {

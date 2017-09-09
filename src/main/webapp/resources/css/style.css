@@ -80,6 +80,12 @@ body {
 	padding-top: 10px;
 }
 
+#right-side-admin {
+	float: right;
+	width: 400px;
+	padding-top: 10px;
+}
+
 #addressList {
 	list-style-type: none;
 }
@@ -94,6 +100,20 @@ body {
 }
 
 #right-side li {
+	font-size: 13px;
+	line-height: 180%;
+}
+
+#right-side-admin h2, h3 {
+	color: #333;
+}
+
+#right-side-admin p {
+	font-size: 13px;
+	line-height: 180%;
+}
+
+#right-side-admin li {
 	font-size: 13px;
 	line-height: 180%;
 }

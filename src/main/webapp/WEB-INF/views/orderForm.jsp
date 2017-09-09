@@ -1,4 +1,4 @@
-<title>Manage Inventory</title>
+<title>Manage Orders</title>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,7 +10,7 @@
 
 	<div id="content-wrapper">
 		<h1>Manage Orders</h1>
-		<p>Below is a list of all Orders. You and edit/delete orders here.</p>
+		<p>Below is a list of all orders made on the website. You can edit the orders here. You can also delete the order once processed.</p>
 		<p>
 			To add orders to the database click <a href="newOrder">here</a>.
 		</p>

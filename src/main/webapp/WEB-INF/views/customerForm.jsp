@@ -10,7 +10,7 @@
 
 	<div id="content-wrapper">
 		<h1>Manage Customers</h1>
-		<p>Below is a list of all customers signed up for the website. Here you and edit/delete customers.</p>
+		<p>Below is a list of all customers signed up to the website. Here you and edit/remove existing customers. You can also select the customer type to be either primary or normal by clicking edit.</p>
 		<p>To add a customer to the database click <a href="newCustomer">here</a>.</p>
 			<table class="table1">
 				<th>ID</th>
