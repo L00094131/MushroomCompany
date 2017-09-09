@@ -20,7 +20,7 @@
 				Mushroom Company provide We strive to provide the best in quality
 				and freshness to our customers.</p>
 
-			<TABLE>
+			<TABLE width="850" >
 				<TR>
 					<TD><h3>Button Mushrooms</h3></TD>
 				</TR>
@@ -34,16 +34,17 @@
 							stems.Depending on when they are harvested they are either stark
 							white in color or earthen brown like a Crimini mushroom. Their
 							flavor is mild when raw and more fragrant and meaty when cooked.
-
-						
-						<p></TD>
+							</p></TD>
+					<TD><p><b> Small: 3 
+					           Medium: 5
+					           Large: 6.50 </b></p></TD>
 
 				</TR>
 
 				<TR>
-					<TD><button type="button">
+					<TD>
 							<a href="addOrderCustomer">Order Button Mushrooms</a>
-						</button></TD>
+					</TD>
 				</TR>
 
 				<TR>
@@ -60,13 +61,17 @@
 							during World War I and is now grown commercially around the world
 							for food.It is related to the similarly cultivated king oyster
 							mushroom.</p></TD>
+							
+					<TD><p><b> Small: 4 
+					           Medium: 6 
+					           Large: 7  </b></p></TD>
 
 				</TR>
 
 				<TR>
-					<TD><button type="button">
+					<TD>
 							<a href="addOrderCustomer">Order Oyster Mushrooms</a>
-						</button></TD>
+					</TD>
 				</TR>
 
 				<TR>
@@ -76,17 +81,21 @@
 				<TR>
 					<TD><img
 						src="<c:url value="/resources/images/crimini_mushroom.jpg"/>"></TD>
-					<TD><p>Cremini mushrooms are commonly known as "baby
+					<TD><p>Crimini mushroom's are commonly known as "baby
 							bella" or ""baby portobello".These mushrooms are dak brown and
 							firmer than the common white button mushroom.They have a smooth,
 							rounded cap and a sheath of skin that covers their gills.They
-							have a simialr taste to button mushrooms.</p></TD>
+							have a similar taste to button mushrooms.</p></TD>
+							
+					<TD><p><b> Small: 4.50 
+					           Medium: 7 
+					           Large: 9  </b></p></TD>
 				</TR>
 
 				<TR>
-					<TD><button type="button">
-							<a href="addOrderCustomer">Order Crimini Mushrooms</a>
-						</button></TD>
+					<TD>
+						<a href="addOrderCustomer">Order Crimini Mushrooms</a>
+					</TD>
 				</TR>
 
 				<TR>
@@ -100,19 +109,23 @@
 				<TR>
 					<TD><img
 						src="<c:url value="/resources/images/winter-black-truffle.jpg"/>"></TD>
-					<TD><p>The winter black truffle isthe second-most
-							commercially valuable species, is named after the Périgord region
-							in France and grows with oak and hazelnut trees. Black truffles
+					<TD><p>The winter black truffle is the second-most
+							commercially valuable species, is named after the PÃ©rigord region
+							in France and grows with oak and hazelnut trees. Black truffle's
 							are harvested in late autumn and winter This truffle is
 							celebrated for its garlicky flavor, reminiscent of shallots, and
 							also an intense earthy and musky aroma.</p></TD>
+							
+					<TD><p><b> Small: 6 
+					           Medium: 9 
+					           Large: 11  </b></p></TD>
 
 				</TR>
 
 				<TR>
-					<TD><button type="button">
+					<TD>
 							<a href="addOrderCustomer">Order Black Truffle Mushrooms</a>
-						</button></TD>
+					</TD>
 				</TR>
 
 				<TR>
@@ -127,13 +140,17 @@
 							reminiscent of shallots, and also an intense earthy and musky
 							aroma. Fresh white truffles are not a pure white, but more of a
 							yellowish color, with a smooth exterior.</p></TD>
+							
+					<TD><p><b> Small: 7  
+					        Medium: 9 
+					        Large: 12  </b></p></TD>
 
 				</TR>
 
 				<TR>
-					<TD><button type="button">
-							<a href="addOrderCustomer">Order White Mushrooms</a>
-						</button></TD>
+					<TD>
+					   <a href="addOrderCustomer">Order White Mushrooms</a>
+					</TD>
 				</TR>
 
 

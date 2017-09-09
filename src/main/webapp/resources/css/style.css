@@ -65,6 +65,11 @@ body {
 	text-align: left;
 }
 
+td, th ,tr {
+	padding: 15px;
+	text-align: left;
+}
+
 #content p {
 	font-size: 14px;
 	line-height: 180%;
@@ -226,3 +231,4 @@ body {
 	border-top: 1px #666 solid;
 	padding: 10px 0;
 }
+.TD 
