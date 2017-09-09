@@ -17,9 +17,10 @@
 			<h2>Our Products</h2>
 			<p>This is the range of mushrooms and truffle's we at the
 				Mushroom Company provide We strive to provide the best in quality
-				and freshness to our customers.</p>
+				and freshness to our customers.
+				</p>
 
-			<TABLE>
+			<TABLE width = 850;>
 				<TR>
 					<TD><h3>Button Mushrooms</h3></TD>
 				</TR>
@@ -28,15 +29,15 @@
 					<TD><img
 						src="<c:url value="/resources/images/buttonmushroom.jpg"/>"></TD>
 
-					<TD><p>White Button mushrooms are tiny thumbnail sized
+					<TD><p>White Button mushrooms are tiny thumb nail sized
 							mushrooms with smooth rounded caps and short truncated
 							stems.Depending on when they are harvested they are either stark
 							white in color or earthen brown like a Crimini mushroom. Their
 							flavor is mild when raw and more fragrant and meaty when cooked.
 							</p></TD>
-					<TD><p><b> Small: 3 
-					           Medium: 5
-					           Large: 6.50 </b></p></TD>
+					<TD><p><b> Small:3 
+					           Medium:5
+					           Large:6.50 </b></p></TD>
 
 				</TR>
 
@@ -61,9 +62,9 @@
 							for food.It is related to the similarly cultivated king oyster
 							mushroom.</p></TD>
 							
-					<TD><p><b> Small: 4 
-					           Medium: 6 
-					           Large: 7  </b></p></TD>
+					<TD><p><b> Small:4 
+					           Medium:6 
+					           Large:7  </b></p></TD>
 
 				</TR>
 
@@ -86,9 +87,9 @@
 							rounded cap and a sheath of skin that covers their gills.They
 							have a similar taste to button mushrooms.</p></TD>
 							
-					<TD><p><b> Small: 4.50 
-					           Medium: 7 
-					           Large: 9  </b></p></TD>
+					<TD><p><b> Small:4.50 
+					           Medium:7 
+					           Large:9  </b></p></TD>
 				</TR>
 
 				<TR>
@@ -109,15 +110,15 @@
 					<TD><img
 						src="<c:url value="/resources/images/winter-black-truffle.jpg"/>"></TD>
 					<TD><p>The winter black truffle is the second-most
-							commercially valuable species, is named after the Périgord region
+							commercially valuable species, is named after the Parigord region
 							in France and grows with oak and hazelnut trees. Black truffle's
 							are harvested in late autumn and winter This truffle is
 							celebrated for its garlicky flavor, reminiscent of shallots, and
 							also an intense earthy and musky aroma.</p></TD>
 							
-					<TD><p><b> Small: 6 
-					           Medium: 9 
-					           Large: 11  </b></p></TD>
+					<TD><p><b> Small:6 
+					           Medium:9 
+					           Large:11  </b></p></TD>
 
 				</TR>
 
@@ -140,9 +141,9 @@
 							aroma. Fresh white truffles are not a pure white, but more of a
 							yellowish color, with a smooth exterior.</p></TD>
 							
-					<TD><p><b> Small: 7  
-					        Medium: 9 
-					        Large: 12  </b></p></TD>
+					<TD><p><b> Small:7  
+					        Medium:9 
+					        Large:12  </b></p></TD>
 
 				</TR>
 

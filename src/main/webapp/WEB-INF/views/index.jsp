@@ -25,32 +25,27 @@
 		<div id="content-wrapper">
 			<div id="content">
 				<h1>Welcome</h1>
-				<p>This is sample text, this is sample text, this is sample
-					text, this is sample text, this is sample text, this is sample
-					text, this is sample text, this is sample text, this is sample
-					text, this is sample text, this is sample text, this is sample
-					text, this is sample text, this is sample text, this is sample
-					text, this is sample text, this is sample text, this is sample
-					text, this is sample text, this is sample text, this is sample
-					text, this is sample text, this is sample text,this is sample text,
-					this is sample text, this is sample textThis is sample text, this
-					is sample text.</p>
+				<p>Welcome to the Mushroom Company. We are an organic locally grown 
+				mushroom farm who provide a range of mushrooms and truffle's</p>
 				<h2>What we provide</h2>
-				<p>This is sample text, this is sample text, this is sample
-					text, this is sample text</p>
+				<p>We specialise in a vast amount of unique and exciting mushroom and truffle
+				 delicacies. </p>
 
 				<div id="box1">
 					<img src="<c:url value="/resources/images/box1.jpg"/>">
 					<h2>Mushrooms</h2>
-					<p>This is sample text, this is sample text, this is sample
-						text, this is sample textThis is sample text, this is sample text.</p>
+					<p>Our mushrooms are produced to the highest quality and taste 
+					of any others in the region of Pennsylvania.From button to oysters we offer
+					an exciting range of tasteful delicacies to satisfy any food lover.</p>
 				</div>
 
 				<div id="box2">
 					<img src="<c:url value="/resources/images/box2.png"/>">
 					<h2>Truffles</h2>
-					<p>This is sample text, this is sample text, this is sample
-						text, this is sample textThis is sample text, this is sample text.</p>
+					<p>At the right time of the year, our farmers source locally grown truffle's
+					which deliver an exotic and desirable taste for our customers.Hand picked from 
+					or local gardens and traditionally picked by our very own pigs.Our range of truffles
+					are the ideal treat for any food enthusiast. </p>
 				</div>
 			</div>
 

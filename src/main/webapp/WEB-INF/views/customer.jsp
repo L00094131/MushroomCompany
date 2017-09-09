@@ -12,15 +12,13 @@
 		<div id="content">
 			<h1>Welcome to the Customer page</h1>
 			
-			<p>This is sample text, this is sample text, this is sample
-				text, this is sample textThis is sample text, this is sample text, this is sample
-				text, this is sample textThis is sample text, this is sample text, this is sample
-				text, this is sample textThis is sample text, this is sample text, this is sample
-				text, this is sample textThis is sample text, this is sample text, this is sample
-				text, this is sample textThis is sample text, this is sample text, this is sample
-				text, this is sample textThis is sample text, this is sample text, this is sample
-				text, this is sample textThis is sample text, this is sample text, this is sample
-				text, this is sample textThis is sample text, this is sample text.</p>
+			<p>Here at the Mushroom Company, we cater our products to a vast range of customers. From high
+			end restaurants to local food lover , supply only the best quality of fresh produce to all customers.
+			 we encourage new customers of all types and will strive to do our best to satisfy our customers.
+			 To register to become a free member of the mushroom Company , please follow the link below to gain one 
+			 step closer to locally produced mushrooms and truffle's.
+			inquiry </p>
+			<a href="newCustomer"> New Customer ?</a>
 			<h2>Enjoy your stay</h2>
 
 			
