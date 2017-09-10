@@ -20,7 +20,7 @@
 				and freshness to our customers.
 				</p>
 
-			<TABLE width = 850;>
+			<TABLE class="products">
 				<TR>
 					<TD><h3>Button Mushrooms</h3></TD>
 				</TR>

@@ -18,7 +18,7 @@
 			 To register to become a free member of the mushroom Company , please follow the link below to gain one 
 			 step closer to locally produced mushrooms and truffle's.
 			inquiry </p>
-			<a href="newCustomer"> New Customer ?</a>
+			<a href="signup"> New Customer ?</a>
 			<h2>Enjoy your stay</h2>
 
 			
